@@ -51,14 +51,13 @@ body {
 h1 {
 	font-size: 2em;
 	font-family: arial, helvetica;
-	color: #fff;
+	color: black;
 	margin: 0;
 	padding: 0;
 }
 
 p {
-	font-size: 1.5em;
-	color: #fff;
+	color: black;
 }
 
 .section {
@@ -118,27 +117,23 @@ p {
 	margin: 0;
 }
 
-
 .intro p {
 	width: 50%;
 	margin: 0 auto;
-	font-size: 1.5em;
+	font-size: 1em;
 }
 
-#section1,
-#section2,
-#section3,
-#section4 {
+#page1,
+#page2,
+#page3,
+#page4 {
 	background-size: cover;
 }
 
 /* Section 1
  * --------------------------------------- */
-#section1 h1, h2, p {
-	color: black;
-}
 
-#section1 .layer {
+#page1 .layer {
 	position: absolute;
 	z-index: 5;
 	width: 100%;
@@ -147,47 +142,44 @@ p {
 	height: 100%;
 }
 
+#page1 {
+	background-color: #0A0AD8;
+}
+
+
 /* Section 2
  * --------------------------------------- */
-#section2 h1 {
-	margin-top: -250px;
-	margin-left: 500px;
-	color: #E847AE;
-}
 
-#section2 p {
-	opacity: 0.8;
-	z-index: 3;
-	color: #E847AE;
-	margin-left: 500px;
+#page2 {
+	background-color: #FFBF00;
 }
-
-#section2 {
-	background-color: yellow;
-}
-
 
 /* Section 3
  * --------------------------------------- */
-#section3 h1 {
-	margin-right: 700px;
-	color: #f21a1d;
-	margin-top: -200px;
-}
 
-#section3 p {
-	color: #f21a1d;
-	display: none;
-	margin-right: 700px;
-}
-
-#section3 .intro {
+#page3 .intro {
 	left: -150%;
 	position: relative;
 }
 
-#section3 {
+#page3 {
 	background-color: red;
+}
+
+
+
+
+/* Section 4
+ * --------------------------------------- */
+
+
+#page4 .intro {
+	left: -150%;
+	position: relative;
+}
+
+#page4 {
+	background-color: goldenrod;
 }
 
 

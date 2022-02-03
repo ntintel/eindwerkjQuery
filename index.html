@@ -13,75 +13,41 @@
 
 <body>
     <ul id="menu">
-        <li data-menuanchor="page1" class="active"><a href="#page1">jQuery</a></li>
+        <li data-menuanchor="page1" class="active"><a href="#page1">Welkom</a></li>
         <li data-menuanchor="page2"><a href="#page2">Praktische info</a></li>
         <li data-menuanchor="page3"><a href="#page3">Inschrijven</a></li>
+        <li data-menuanchor="page4"><a href="#page4">Sectie 4</a></li>
 
     </ul>
+    <div id="pagepiling">
+        <div class="section" id="page1">
+            <h1>Sectie 1</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur eos officia aspernatur odit,
+                voluptatum aliquid nisi vitae repellendus! Nulla cupiditate libero laboriosam! In officia pariatur illum
+                odit, et repellendus illo!</p>
+        </div>
+        <div class="section" id="page2">
+            <h1>Sectie 2</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur eos officia aspernatur odit,
+                voluptatum aliquid nisi vitae repellendus! Nulla cupiditate libero laboriosam! In officia pariatur illum
+                odit, et repellendus illo!</p>
+        </div>
+        <div class="section" id="page3">
+            <h1>Sectie 3</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur eos officia aspernatur odit,
+                voluptatum aliquid nisi vitae repellendus! Nulla cupiditate libero laboriosam! In officia pariatur illum
+                odit, et repellendus illo!</p>
+        </div>
+        <div class="section" id="page4">
+            <h1>Sectie 4</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur eos officia aspernatur odit,
+                voluptatum aliquid nisi vitae repellendus! Nulla cupiditate libero laboriosam! In officia pariatur illum
+                odit, et repellendus illo!</p>
+        </div>
+    </div>
 
     <div style="position:fixed;top:50px;left:50px;color:white;z-index:999;" id="callbacksDiv"></div>
 
-    <div id="pagepiling">
-        <div class="section" id="section1">
-
-            <div class="layer">
-                <h1>Cursus jQuery</h1>
-                <h2>CVO De Verdieping</h2>
-                <p>Scroll down for more</p>
-            </div>
-        </div>
-        <div class="section" id="section2">
-            <div class="intro">
-                <h2>jQuery</h2>
-                <p>Programmeren</p> <br>
-                <p>Javascript</p>
-                <br>
-                <p>
-                    Programmeer eenvoudig en snel met jQuery. Deze rijke, snelle en elegante uitbreiding op JavaScript
-                    is open source – er is een uitgebreide documentatie voorzien en een zeer actieve community. Daardoor
-                    wordt er heel regelmatig een update uitgebracht en verschijnen er constant nieuwe plugins. jQuery is
-                    een verzameling van functies die de oorspronkelijke JavaScript functies uitbreiden. Je hebt complete
-                    controle over de DOM (Document Object Model), met andere woorden de elementen in je HTML-pagina.
-                    jQuery ondersteunt alle populaire en minder populaire browsers.
-                </p>
-                <!-- knop voor naar inschrijvings sectie te gaan -->
-                <a href="#">Hier inschrijven</a>
-                <br><br>
-                <h3>Wat leer je in deze cursus?</h3>
-                <ul>
-                    <li>Basistechnieken jQuery – implementatie script</li>
-                    <li>Selectors – selecteren van elementen op de pagina</li>
-                    <li>Events – gebeurtenissen opsporen en afhandelen (bijvoorbeeld een muisklik, over een afbeelding
-                        hoveren,…)</li>
-                    <li>Effects – fade, slide, toggle,…</li>
-                    <li>jQuery UI – gebruikers interactie elementen toevoegen en instellen</li>
-                    <li>Animatie met jQuery</li>
-                    <li>Hoe plugins selecteren, toevoegen en instellen</li>
-                    <li>JSON en AJAX – externe data inlezen en wegschrijven, zonder een pagina refresh te doen</li>
-                    <li>Een parallax effect toevoegen</li>
-                    <li>Een eigen plugin definiëren</li>
-                </ul>
-
-                <!-- schuift open bij aanklikken -->
-                <div>
-                    <h3>Extra informatie</h3>
-                    <p>Wat heb je nodig om deze cursus te volgen?</p>
-                    <br>
-                    <p>Je kan vlot met een computer en internet werken</p>
-                    <p>Je kent HTML en basis programmeertechnieken.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section" id="section3">
-            <div class="intro">
-                <h1>Check this out</h1>
-                <p>There's a little delay here</p>
-                <p>And an even longer one here</p>
-            </div>
-        </div>
-
-    </div>
 
 
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -97,7 +63,7 @@
             $('#pagepiling').pagepiling({
                 direction: 'vertical',
                 menu: '#menu',
-                anchors: ['page1', 'page2', 'page3', 'page4'],
+                anchors: ['page1', 'page2', 'page3'],
                 scrollingSpeed: 700,
             });
         });
