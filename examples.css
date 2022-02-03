@@ -107,14 +107,15 @@ p {
 }
 
 #menu {
-	position: fixed;
 	top: 0;
-	left: 20px;
-	height: 40px;
 	z-index: 70;
 	width: 100%;
 	padding: 0;
 	margin: 0;
+}
+
+#logo{
+	z-index: 2;
 }
 
 .intro p {
@@ -146,6 +147,9 @@ p {
 	background-color: #0A0AD8;
 }
 
+.sectie1{
+	padding: 5%;
+}
 
 /* Section 2
  * --------------------------------------- */
