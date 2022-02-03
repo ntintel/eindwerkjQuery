@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <title>Cursus jQuery</title>
+</head>
+
+<body>
+    <ul id="menu">
+        <li data-menuanchor="page1" class="active"><a href="#page1">Welcome</a></li>
+        <li data-menuanchor="page2"><a href="#page2">Voor wie?</a></li>
+        <li data-menuanchor="page3"><a href="#page3">Praktische info</a></li>
+        <li data-menuanchor="page4"><a href="#page4">Inschrijven</a></li>
+    </ul>
+
+    <div style="position:fixed;top:50px;left:50px;color:white;z-index:999;" id="callbacksDiv"></div>
+
+    <div id="pagepiling">
+        <div class="section" id="section1">
+
+            <div class="layer">
+                <h1>Cursus jQuery</h1>
+                <h2>CVO De Verdieping</h2>
+                <p>Scroll down for more</p>
+            </div>
+        </div>
+        <div class="section" id="section2">
+
+
+        </div>
+        <div class="section" id="section3">
+            <div class="intro">
+                <h1>Check this out</h1>
+                <p>There's a little delay here</p>
+                <p>And an even longer one here</p>
+            </div>
+        </div>
+        <div class="section" id="section4">
+            <div class="intro">
+                <h1>But there's a loop</h1>
+                <p>Just scroll down to go back to the beginning</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+    <script type="text/javascript">
+
+    </script>
+    <script>
+        var deleteLog = false;
+        $(document).ready(function () {
+            $('#pagepiling').pagepiling({
+                direction: 'vertical',
+                menu: '#menu',
+                anchors: ['page1', 'page2', 'page3', 'page4'],
+                scrollingSpeed: 700,
+            });
+        });
+    </script>
+
+</body>
+
+</html>

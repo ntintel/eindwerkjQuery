@@ -1,0 +1,254 @@
+@CHARSET "ISO-8859-1";
+
+/* Reset CSS
+ * --------------------------------------- */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td {
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+table {
+	border-spacing: 0;
+}
+
+fieldset, img {
+	border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-weight: normal;
+	font-style: normal;
+}
+
+strong {
+	font-weight: bold;
+}
+
+ol, ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+q:before, q:after {
+	content: '';
+}
+
+
+
+/* Custom CSS
+ * --------------------------------------- */
+body {
+	font-family: 'Lato', Calibri, Arial, sans-serif;
+	color: #f2f2f2;
+}
+
+h1 {
+	font-size: 2em;
+	font-family: arial, helvetica;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-size: 1.5em;
+	color: #fff;
+}
+
+.section {
+	text-align: center;
+}
+
+/* Menu
+ * --------------------------------------- */
+#menu li {
+	display: inline-block;
+	margin: 30px 10px 10px 10px;
+	color: #fff;
+	background: #fff;
+	background: #00a9fe;
+	-webkit-border-radius: 10px;
+	border-radius: 6px;
+}
+
+#menu li.active {
+	background: #fff;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	border: 1px solid #00a9fe;
+}
+
+#menu li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#menu li.active a:hover {
+	color: #fff;
+}
+
+#menu li:hover {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#menu li a,
+#menu li.active a {
+	padding: 9px 18px;
+	display: block;
+}
+
+#menu li.active a {
+	color: #fff;
+}
+
+#menu {
+	position: fixed;
+	top: 0;
+	left: 20px;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+
+.intro p {
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.5em;
+}
+
+#section1,
+#section2,
+#section3,
+#section4 {
+	background-size: cover;
+}
+
+/* Section 1
+ * --------------------------------------- */
+#section1 h1, h2, p {
+	color: #E847AE;
+}
+
+#section1 .layer {
+	position: absolute;
+	z-index: 5;
+	width: 100%;
+	left: 10;
+	top: 45%;
+	height: 100%;
+}
+
+#myVideo {
+	position: absolute;
+	z-index: 4;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	background-color: black;
+	background-position: center center;
+	background-size: contain;
+	object-fit: cover;
+}
+
+
+/* Section 2
+ * --------------------------------------- */
+#section2 h1 {
+	margin-top: -250px;
+	margin-left: 500px;
+	color: #E847AE;
+}
+
+#section2 p {
+	opacity: 0.8;
+	z-index: 3;
+	color: #E847AE;
+	margin-left: 500px;
+}
+
+#section2 {
+	background-color: yellow;
+}
+
+
+/* Section 3
+ * --------------------------------------- */
+#section3 h1 {
+	margin-right: 700px;
+	color: #f21a1d;
+	margin-top: -200px;
+}
+
+#section3 p {
+	color: #f21a1d;
+	display: none;
+	margin-right: 700px;
+}
+
+#section3 .intro {
+	left: -150%;
+	position: relative;
+}
+
+#section3 {
+	background-color: red;
+}
+
+
+
+/* Section 4
+ * --------------------------------------- */
+
+#section4 h1 {
+	color: #ff2079;
+	margin-top: 400px;
+}
+
+#section4 p {
+	color: #ff2079;
+}
+
+#section4 {
+	background-color: blue;
+}
+
+#section4 .intro {
+	left: 140%;
+	position: relative;
+}
+
+/* Overwriting fullPage.js tooltip color
+* --------------------------------------- */
+#pp-nav.custom .pp-tooltip {
+	color: #AAA;
+}
+
+#pp-nav li .active span, .pp-slidesNav .active span {
+	background: #00a9fe;
+}
+
+.pp-easing {
+	-webkit-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	-moz-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	-o-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	/* custom */
+	-webkit-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	-moz-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	-o-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+	/* custom */
+}
