@@ -135,7 +135,7 @@ p {
 /* Section 1
  * --------------------------------------- */
 #section1 h1, h2, p {
-	color: #E847AE;
+	color: black;
 }
 
 #section1 .layer {
