@@ -1,0 +1,45 @@
+body {
+    font-family: sans-serif;
+    background: rgba(18, 60, 138, 0.81);
+}
+
+h1{
+    color: #251c1cea;
+    text-align: center;
+}
+
+ul#imageGallery{
+    list-style: none;
+    margin: 0 auto;
+    max-width: 880px;
+    text-align: center;
+    padding: 0;
+    display: block;
+}
+
+ul#imageGallery li {
+    padding: 7px;
+    background: #363535;
+    margin: 7px;
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul#imageGallery li img {
+    display: block;
+    width: 170px;
+    height: 140px;
+}
+.container {
+    position: relative;
+  }
+ul#imageGallery p {
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    
+    
+}
