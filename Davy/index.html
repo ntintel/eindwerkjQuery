@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+    <title>Cursus jQuery</title>
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="test">
+        <div id="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+
+        <ul id="menu">
+            <li data-menuanchor="page1" class="active"><a href="#page1">Welkom</a></li>
+            <li data-menuanchor="page2"><a href="#page2">Praktische info</a></li>
+            <li data-menuanchor="page3"><a href="#page3">Inschrijven</a></li>
+            <li data-menuanchor="page4"><a href="#page4">Sectie 4</a></li>
+        </ul>
+
+    </div>
+    <div id="pagepiling">
+        <div class="section" id="page1">
+            <div class="container">
+                <div class="left">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur, suscipit? Nemo, mollitia!
+                        Porro praesentium aliquid natus culpa maxime voluptas laborum! Beatae vitae dolorem odit alias
+                        culpa sit tempora deserunt! Architecto soluta maiores dolor unde quisquam officia cumque ipsam
+                        eius quam, corrupti adipisci odit reprehenderit impedit. Molestias enim nobis sed natus neque
+                        adipisci aperiam voluptatibus dolores nemo, laudantium ullam aliquam. Porro cum accusantium
+                        reiciendis ad beatae officiis modi ducimus unde eligendi iure, aliquid facilis culpa aperiam,
+                        vitae asperiores nam incidunt laborum ipsum, ullam ex blanditiis quam repellat? Aliquid vero
+                        dolorem nihil cum iusto eos maiores unde delectus eum, atque ex facilis?</p>
+                </div>
+                <div class="right">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur eos officia aspernatur
+                        odit,
+                        voluptatum aliquid nisi vitae repellendus! Nulla cupiditate libero laboriosam! In officia
+                        pariatur
+                        illum
+                        odit, et repellendus illo!</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="section" id="page2">
+            <div class="container">
+                <div class="left">
+                    <p>Programmeer eenvoudig en snel met jQuery. Deze rijke, snelle en elegante uitbreiding op
+                        JavaScript is open source – er is een uitgebreide documentatie voorzien en een zeer actieve
+                        community. Daardoor wordt er heel regelmatig een update uitgebracht en verschijnen er constant
+                        nieuwe plugins. jQuery is een verzameling van functies die de oorspronkelijke JavaScript
+                        functies uitbreiden. Je hebt complete controle over de DOM (Document Object Model), met andere
+                        woorden de elementen in je HTML-pagina. jQuery ondersteunt alle populaire en minder populaire
+                        browsers.</p>
+                    <br>
+                    <h2 class="cursus-titel">Wat leer je in deze cursus?</h2>
+                    <ol id="cursus-lijst">
+                        <li>Basistechnieken jQuery – implementatie script</li>
+                        <li>Selectors – selecteren van elementen op de pagina</li>
+                        <li>Events – gebeurtenissen opsporen en afhandelen (bijvoorbeeld een muisklik, over een
+                            afbeelding hoveren,…)</li>
+                        <li>Effects – fade, slide, toggle,…</li>
+                        <li>jQuery UI – gebruikers interactie elementen toevoegen en instellen</li>
+                        <li>Animatie met jQuery</li>
+                        <li>Hoe plugins selecteren, toevoegen en instellen</li>
+                        <li>JSON en AJAX – externe data inlezen en wegschrijven, zonder een pagina refresh te doen
+                        </li>
+                        <li>Een parallax effect toevoegen</li>
+                        <li>Een eigen plugin definiëren</li>
+                    </ol>
+                </div>
+                <div class="right">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur eos officia aspernatur
+                        odit,
+                        voluptatum aliquid nisi vitae repellendus! Nulla cupiditate libero laboriosam! In officia
+                        pariatur
+                        illum
+                        odit, et repellendus illo!</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="page3">
+            <div class="container">
+                <div class="left">
+                    <h1 class="h1-mg2">jQuery</h1>
+                    <p>Programmeer eenvoudig en snel met jQuery. Deze rijke, snelle en elegante uitbreiding op
+                        JavaScript is open source – er is een uitgebreide documentatie voorzien en een zeer actieve
+                        community. Daardoor wordt er heel regelmatig een update uitgebracht en verschijnen er constant
+                        nieuwe plugins. jQuery is een verzameling van functies die de oorspronkelijke JavaScript
+                        functies uitbreiden. Je hebt complete controle over de DOM (Document Object Model), met andere
+                        woorden de elementen in je HTML-pagina. jQuery ondersteunt alle populaire en minder populaire
+                        browsers.</p>
+                    <div class="border-1"></div>
+                    <p>Je wilt je inschrijven voor de cursus jQuery. Dat gaat gemakkelijk.
+                        Vul rechts in inschrijfformulier in. Wanneer je de inschrijving
+                        hebt afgerond, ontvang je nog een bevestigingsmail.</p>
+                    <input type="submit" class="openBtn" href="javascript:void(0)" value="Bekijk alle inschrijvingen">
+                    <div class="popup">
+                        <div class="popup-content">
+                            <h1 class="h1-mg2 white">Inschrijvingen cursus jQuery</h1>
+                            <div id="box"></div>
+
+                            <a class="closeBtn" href="javascript:void(0)">x</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right contactform box">
+                    <div class="ribbon"><span>NIEUW</span></div>
+                    <h1 class="h1-mg">Inschrijfformulier</h1>
+                    <form method="post" action="submit_to_db_pdo.php">
+                        <div id="container">
+                            <label>
+                                <p class="label-txt">Volledige naam</p>
+                                <input type="text" id="naam" class="input">
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </label>
+                            <label>
+                                <p class="label-txt">E-mail</p>
+                                <input type="email" id="email" class="input">
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </label>
+                            <label>
+                                <p class="label-txt">Opleidingstraject</p>
+                                <input type="text" id="opleidingstraject" placeholder="V-School of cursustraject"
+                                    class="input">
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </label>
+                            <input type="submit" name="submit" id="submit" value="Schrijf me in!" />
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="section" id="page4">
+            <div class="container">
+                <div class="left">
+                    <h1>Sectie 4</h1>
+                </div>
+                <div class="right">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur eos officia aspernatur
+                        odit,
+                        voluptatum aliquid nisi vitae repellendus! Nulla cupiditate libero laboriosam! In officia
+                        pariatur
+                        illum
+                        odit, et repellendus illo!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="position:fixed;top:50px;left:50px;color:white;z-index:999;" id="callbacksDiv"></div>
+
+
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+
+
+
+    <script type="text/javascript">
+
+    </script>
+    <script>
+        var deleteLog = false;
+        $(document).ready(function () {
+            $('#pagepiling').pagepiling({
+                direction: 'vertical',
+                menu: '#menu',
+                anchors: ['page1', 'page2', 'page3'],
+                scrollingSpeed: 700,
+            });
+
+            // Inschrijfformulier Davy
+            $('input').focus(function () {
+                $(this).parent().find(".label-txt").addClass('label-active');
+            });
+
+            $("input").focusout(function () {
+                if ($(this).val() == '') {
+                    $(this).parent().find(".label-txt").removeClass('label-active');
+                };
+            });
+
+            // Formulier data toevoegen aan database Davy
+            let $container = $("#container");
+            let $naam = $("#naam");
+            let $email = $("#email");
+            let $opleidingstraject = $("#opleidingstraject");
+
+            $('#submit').click(function (e) {
+                $('#errorMsg').remove();
+                $container.append('<img src="images/loading.gif" alt="Loading" id="loading" />');
+                let naamVal = $naam.val();
+                let emailVal = $email.val();
+                let opleidingstrajectVal = $opleidingstraject.val();
+                e.preventDefault();
+                if (naamVal != "" && emailVal != "" && opleidingstrajectVal != "") {
+                    $.ajax({
+                        url: 'submit_to_db_pdo.php',
+                        type: 'POST',
+                        data: 'naam=' + naamVal + '&email=' + emailVal + '&opleidingstraject=' + opleidingstrajectVal,
+                        success: function (result) {
+                            $('#response').remove();
+                            $container.append('<p id="response">' + result + '</p>');
+                            $('#loading').fadeOut(500, function () {
+                                $(this).remove();
+                            });
+                            $naam.val("");
+                            $email.val("");
+                            $opleidingstraject.val("");
+
+                        }
+
+                    });
+                } else {
+                    $container.append("<p id='errorMsg'>Niet alle velden zijn ingevuld!</p>");
+                    $('#loading').fadeOut(500, function () {
+                        $(this).remove();
+                    });
+
+                }
+
+            });
+
+
+            // Data opvragen uit database Davy
+            $.ajax({
+                url: 'opvragen.php',
+                type: 'GET',
+                success: function (result) {
+                    $('#box').append(result);
+                }
+            });
+
+
+            //POPUP Davy
+            // Open Popup
+            $('.openBtn').on('click', function () {
+                $('.popup').fadeIn(300);
+            });
+
+            // Close Popup
+            $('.closeBtn').on('click', function () {
+                $('.popup').fadeOut(300);
+            });
+
+            // Close Popup when Click outside
+            $('.popup').on('click', function () {
+                $('.popup').fadeOut(300);
+            }).children().click(function () {
+                return false;
+            });
+
+
+            //Cusom cursor Davy
+            var cursor = $('.cursor');
+            $(window).mousemove(function (e) {
+                cursor.css({
+                    top: e.clientY - cursor.height() / 2,
+                    left: e.clientX - cursor.width() / 2
+                });
+            });
+            $(window)
+                .mouseleave(function () {
+                    cursor.css({
+                        opacity: "0"
+                    });
+                })
+                .mouseenter(function () {
+                    cursor.css({
+                        opacity: "1"
+                    });
+                });
+            $(window)
+                .mousedown(function () {
+                    cursor.css({
+                        transform: "scale(.2)"
+                    });
+                })
+                .mouseup(function () {
+                    cursor.css({
+                        transform: "scale(1)"
+                    });
+                });
+            $(".link")
+                .mouseenter(function () {
+                    cursor.css({
+                        transform: "scale(3.2)"
+                    });
+                })
+                .mouseleave(function () {
+                    cursor.css({
+                        transform: "scale(1)"
+                    });
+                });
+        })
+    </script>
+
+</body>
+
+</html>
