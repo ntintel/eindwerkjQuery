@@ -58,7 +58,7 @@ body {
 }
 
 #t {
-  white-space: pre-wrap;
+
   color: white;
   font-family: "Roboto";
   font-size: 18px;
@@ -73,6 +73,11 @@ body {
 
 #type {
   font-size: 24px;
+  color: var(--main-color);
+}
+
+#type2 {
+  font-size: 18px;
   color: var(--main-color);
 }
 
@@ -101,17 +106,16 @@ kbd {
 
 .fa-chevron-down {
   color: var(--main-color);
-  font-size: 36px;
+  font-size: 50px;
   position: fixed;
   bottom: 20px;
-  left: 52%;
+  left: 50%;
 }
 
 .fa-bars {
   font-size: 40px;
   padding: 10px 8px;
 }
-
 
 /* full page menu
  * --------------------------------------- */
@@ -135,6 +139,7 @@ h3.nav02 {
   font-size: 32px;
   top: 20px;
   right: 100px;
+  color: black;
 }
 
 /*** button ***/
@@ -154,7 +159,7 @@ button {
   cursor: pointer;
 }
 
-
+#arrow {}
 
 /*--- Nav Drop down --*/
 
