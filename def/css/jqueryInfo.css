@@ -1,25 +1,32 @@
 body {
     background-color: #000000;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
 }
 
 #container4 {
     width: 80%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
     margin: auto;
 }
 
+#container4 div {
+    width: calc(48% - 1rem);
+    box-sizing: border-box;
+}
+
 .content-div {
-    margin-top: 20%;
+    margin-top: -5%;
+    position: absolute;
 }
 
 .jquery-t {
     margin: auto;
     text-align: center;
     margin-top: 14%;
+    margin-bottom: 5%;
     font-size: 3em;
     color: #CE52CF;
 }
@@ -30,4 +37,16 @@ p {
 
 .jquery-info {
     line-height: 30px;
+    text-align: justify;
+}
+
+#contentarea {
+    border: 1px solid #CE52CF;
+    width: 20%;
+    margin-top: 2%;
+}
+
+footer {
+    background-color: #333;
+    padding: 2%;
 }

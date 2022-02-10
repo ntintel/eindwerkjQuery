@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p>
+            <img src="../images/night.png" style="float:left;vertical-align:middle" />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit justo a justo accumsan luctus.
+            In eu dui vitae lacus ...
+        </p>
+    </div>
+
+
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            // img word groter met hover Jasmine
+            $('.img').mouseenter(function () {
+                $(this).animate({
+                    width: '65%',
+                    height: '38%'
+                })
+            })
+            $('.img').mouseleave(function () {
+                $(this).animate({
+                    width: '50%',
+                    height: '28%'
+                })
+            })
+        });
+    </script>
+</body>
+
+</html>
