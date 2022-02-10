@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="js-homepage/polygonizr.min.js"></script>
+
     <link rel="stylesheet" href="css/examples.css">
     <title>Cursus jQuery</title>
 </head>
@@ -62,23 +62,21 @@
 
     <script src="js/t.js"></script>
     <script src="js/t.min.js"></script>
+    <script src="js-homepage/polygonizr.min.js"></script>
+
+
     <script>
         $(document).ready(function () {
-
-
-            // --- Full page dropdown menu
+            // --- FULL PAGE DROPDOWN MENU - NELE
+            let $dropdown = $('.drop-down')
             $('.btn02').click(function () {
-                $('.drop-down').animate({ top: "0px" }, 600);
+                $dropdown.animate({ top: "0px" }, 600);
             });
-
             $('h3.nav02').click(function () {
-                $('.drop-down').animate({ top: "-100vh" }, 600);
+                $dropdown.animate({ top: "-100vh" }, 600);
             });
 
-
-
-
-            //--- Titel Home
+            //--- TITEL - NELE
             let $titel = $('#cursustitel')
             $titel.on('click', function () {
                 $titel.addClass('animate__flash');
@@ -87,10 +85,7 @@
                 }, 200);
             });
 
-
-
-
-            // --- Achtergond polygon
+            // --- ACHTERGROND POLYGON- JASMIEN
             let $sitelading = $('#site-landing');
             $sitelading.polygonizr();
 
@@ -101,33 +96,27 @@
                     canvasHeight: $(this).height(),
                     canvasWidth: $(this).width()
                 });
-
                 $sitelading.polygonizr("refresh");
             });
 
-            // --- Typewriter plugin
+            // --- TYPEWRITER PLUGIN - NELE
             $(function () {
                 $('#t').t({
-
-                    delay: 2,                   // start delay in seconds [default:0]
-                    speed: 50,                  // typing speed (ms) [default:50]
-                    speed_vary: false,          // 'human like' speed variation [default:false]
-                    beep: false,                 // beep while typing (Web Audio API) [default:false]
-                    mistype: 3,                 // mistype rate: 1:N per char [default:false]
-                    locale: 'en',               // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
-                    caret: '\u2589',            // caret content; can be html too [default:true (\u258e)]
-                    blink: true,                // blink-interval in ms; if TRUE, speed*3  [default:true]
-                    blink_perm: false,          // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
-                    repeat: 0,                  // repeat typing: if TRUE, infinite or N times [default:0]
-                    tag: 'span',                // wrapper tag (.t-container, .t-caret) [default:'span']
-                    pause_on_click: true,       // pauses/continues typing on click/tap (elm) [default:false]
-                    pause_on_tab_switch: true,  // pauses typing if window is inactive (Page Visibility API) [default:false]
-
-                    // init callback (ready-to-type)
+                    delay: 2,
+                    speed: 50,
+                    speed_vary: false,
+                    beep: false,
+                    mistype: 3,
+                    locale: 'en',
+                    caret: '\u2589',
+                    blink: true,
+                    blink_perm: false,
+                    repeat: 0,
+                    tag: 'span',
+                    pause_on_click: true,
+                    pause_on_tab_switch: true,
                     init: function (elm) { },
-                    // typing callback
                     typing: function (elm, chr_or_elm, left, total) { },
-                    // finished callback
                     fin: function (elm) { }
                 });
             });
