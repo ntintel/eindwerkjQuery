@@ -9,9 +9,7 @@
 </head>
 
 <body>
-
-    <p>Klik op de knoppen om te zien wat je met jQuery kan</p>
-
+    <p id="ajax">Klik op de knoppen om te zien wat je met jQuery kan</p>
     <button id="hide">Hide</button>
     <button id="show">Show</button>
 
@@ -20,10 +18,10 @@
     <script>
         $(document).ready(function () {
             $("#hide").click(function () {
-                $("p").hide();
+                $("#ajax").hide();
             });
             $("#show").click(function () {
-                $("p").show();
+                $("#ajax").show();
             });
         });
     </script>

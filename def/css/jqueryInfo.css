@@ -1,6 +1,6 @@
 body {
     background-color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto";
     margin: 0 auto;
 }
 
@@ -27,7 +27,7 @@ body {
     text-align: center;
     margin-top: 14%;
     margin-bottom: 5%;
-    font-size: 3em;
+    font-size: 2em;
     color: #CE52CF;
 }
 
@@ -36,17 +36,33 @@ p {
 }
 
 .jquery-info {
-    line-height: 30px;
+    line-height: 28px;
     text-align: justify;
 }
 
 #contentarea {
     border: 1px solid #CE52CF;
-    width: 20%;
-    margin-top: 2%;
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 200px;
 }
+
+#buttons {
+    margin-left: 35%;
+}
+
 
 footer {
     background-color: #333;
     padding: 2%;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    margin-top: 20px;
+    margin: auto;
 }
