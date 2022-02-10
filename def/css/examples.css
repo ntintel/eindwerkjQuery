@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&family=Work+Sans:wght@200;300;400;500;700&display=swap');
 
-
-
 :root {
   --main-color: #CE52CF;
   --background: black;
@@ -27,6 +25,7 @@ body {
   margin: auto;
   text-align: center;
   margin-top: 14%;
+  font-size: 4em;
   color: var(--main-color);
   font-size: 60px;
   z-index: 900;
