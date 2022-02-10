@@ -1,0 +1,476 @@
+@charset "ISO-8859-1";
+
+/* Reset CSS
+ * --------------------------------------- */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+* {
+  cursor: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+table {
+  border-spacing: 0;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-weight: normal;
+  font-style: normal;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+q:before,
+q:after {
+  content: '';
+}
+
+/* Custom CSS
+ * --------------------------------------- */
+body {
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  color: #f2f2f2;
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: arial, helvetica;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: black;
+}
+
+/* Hier kan je de tekst centreren indien gewenst en de section p hieronder hetzelfde. */
+.section {
+  text-align: left;
+}
+
+.section p {
+  text-align: left;
+}
+
+/* Als je nog een rij bijwilt kan je bij grid template rows nog 1 maal 1fr bijzetten en als je bij een andere sectie iets anders wilt of iets breder 1 kolom dan gewoon een css class erachter zetten en die gebruiken zodat dit enkel toepassing heeft op dat onderdeel*/
+.container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 100px;
+  margin: auto;
+}
+
+#logo {
+  z-index: 71;
+  position: absolute;
+  margin-top: 35px;
+  left: 10%;
+}
+
+/* Menu
+ * --------------------------------------- */
+#menu li {
+  display: inline-block;
+  margin: 30px 10px 10px 10px;
+  color: #fff;
+  background: #fff;
+  background: #00a9fe;
+  -webkit-border-radius: 10px;
+  border-radius: 6px;
+}
+
+#menu li.active {
+  background: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid #00a9fe;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#menu li.active a:hover {
+  color: #fff;
+}
+
+#menu li:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#menu li a,
+#menu li.active a {
+  padding: 9px 18px;
+  display: block;
+}
+
+#menu li.active a {
+  color: #fff;
+}
+
+#menu {
+  position: fixed;
+  height: 40px;
+  z-index: 70;
+  right: 10%;
+}
+
+.intro p {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1em;
+}
+
+#page1,
+#page2,
+#page3,
+#page4 {
+  background-size: cover;
+}
+
+/* Section 1
+ * --------------------------------------- */
+
+#page1 .layer {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  left: 10;
+  top: 45%;
+  height: 100%;
+}
+
+#page1 {
+  background-color: #0a0ad8;
+}
+
+.cursus-titel {
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+#cursus-lijst {
+  text-align: left;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 24px;
+}
+
+/* Section 2
+ * --------------------------------------- */
+
+#page2 {
+  background-color: #ffbf00;
+}
+
+/* Section 3
+ * --------------------------------------- */
+
+#page3 .intro {
+  left: -150%;
+  position: relative;
+}
+
+#page3 {
+  background-color: #4cbfc4;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.139);
+}
+
+.contactform {
+  background: #fff;
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.h1-mg {
+  font-size: 1.7rem;
+  margin-bottom: 4rem;
+}
+
+.h1-mg2 {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.box {
+  width: 80%;
+  position: relative;
+  border: 1px solid #bbb;
+  background: #eee;
+}
+.ribbon {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px;
+  height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: linear-gradient(#d32727 0%, #d32727 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px;
+  right: -21px;
+}
+.ribbon span::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid #d32727;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #d32727;
+}
+.ribbon span::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #d32727;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #d32727;
+}
+
+label {
+  display: block;
+  position: relative;
+  margin: 30px 0px;
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 30px;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+}
+
+.line-box {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: #bcbcbc;
+}
+
+.line {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #d32727;
+  transition: ease 0.6s;
+}
+
+input:focus + .line-box .line {
+  width: 100%;
+}
+
+.label-txt {
+  position: absolute;
+  top: -1.6em;
+  padding: 10px;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  color: rgb(120, 120, 120);
+  transition: ease 0.3s;
+}
+
+.label-active {
+  top: -3em;
+}
+
+input[type='submit'],
+.openBtn {
+  width: 40%;
+  height: 50px;
+  padding: 5px 24px;
+  background: rgb(220, 220, 220);
+  font-weight: bold;
+  color: rgb(120, 120, 120);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: ease 0.3s;
+  margin-top: 1rem;
+}
+
+input[type='submit']:hover,
+.openBtn:hover {
+  background: #d32727;
+  color: #ffffff;
+}
+
+.border-1 {
+  margin: 2rem 0;
+  border: 1px solid #d32727;
+}
+
+#response {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/*POP UP CSS*/
+/* Popup open button */
+.popup {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.58);
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 99999;
+}
+
+/* Popup inner div */
+.popup-content {
+  width: 600px;
+  margin: 0 auto;
+  padding: 40px;
+  margin-top: 100px;
+  border-radius: 3px;
+  background: #2d3e50;
+  position: relative;
+}
+
+/* Popup close button */
+.closeBtn {
+  position: absolute;
+  top: 5px;
+  right: 12px;
+  font-size: 25px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.white {
+  color: #fff;
+}
+
+th {
+  padding: 0px 50px 0px 0px;
+  font-weight: bold;
+}
+
+/* Custom cursor*/
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 999;
+  transition: transform 0.2s;
+}
+
+/* Section 4
+ * --------------------------------------- */
+
+#page4 .intro {
+  left: -150%;
+  position: relative;
+}
+
+#page4 {
+  background-color: goldenrod;
+}
+
+/* Overwriting fullPage.js tooltip color
+* --------------------------------------- */
+#pp-nav.custom .pp-tooltip {
+  color: #aaa;
+}
+
+#pp-nav li .active span,
+.pp-slidesNav .active span {
+  background: black;
+}

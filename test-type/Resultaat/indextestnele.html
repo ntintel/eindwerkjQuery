@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" href="css/layouts.css">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <title>Cursus jQuery</title>
+    <style>
+        nav {
+            margin: 0 auto;
+            max-width: 690px;
+            z-index: 100;
+            margin-left: 40%;
+            background: #CE52CF;
+            box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+        }
+
+        header {
+            background: #CE52CF;
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+
+        nav::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            float: left;
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: rgba(255, 255, 255, .9);
+            text-decoration: none;
+            padding: 1rem 3rem;
+            border-top: 2px solid transparent;
+            border-bottom: 2px solid transparent;
+            transition: all .3s ease-in-out;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background: rgba(0, 0, 0, .15);
+        }
+
+        nav ul li a:focus {
+            color: white;
+        }
+
+        nav ul li a:not(:only-child)::after {
+            padding-left: 4px;
+            content: ' ▾';
+        }
+
+        nav ul li ul li {
+            min-width: 200px;
+        }
+
+        nav ul li ul li a {
+            background: transparent;
+            color: #555;
+            border-bottom: 1px solid #DDE0E7;
+        }
+
+        nav ul li ul li a:hover,
+        nav ul li ul li a:focus {
+            background: #eee;
+            color: #111;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+            z-index: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#">jQuery</a>
+                <li><a href="#">Voor wie?</a>
+                <li class="drop"><a href="#">Praktische info</a>
+                    <ul class="dropdown">
+                        <li><a href="#">inschrijven</a></li>
+                        <li><a href="#">locatie</a></li>
+                        <li><a href="#">soorten onderwijs</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a>
+            </ul>
+        </nav>
+
+
+
+    </header>
+
+    <!-- HOME - Section 1-->
+    <div class="main" id="page1">
+        <div class="row">
+            <div id="t">
+                <strong id="type">Hey jij!</strong><br>
+                <ins>1.5</ins>Wil je leren hoe je<em> <del>koe<ins>1</ins></del>coole </em>effecten zoals deze kan
+                maken met <kbd>jQuery</kbd>?<br>
+                <strong>Dat en nog veel meer leer je in deze cursus</strong><ins>1</ins>
+                <span class="g">*</span> Events opsporen en afhandelen (muisklik, hover) <ins>.5</ins>
+                <span class="g">*</span> Effects (fade, slide, toggle) en animatie<ins>.5</ins>
+                <span class="g">*</span> Plugins (zoals deze) selecteren en implementeren<ins>.5</ins>
+                <span class="g">*</span> Externe data inlezen (JSON en AJAX)<ins>.5</ins><br>
+                <ins>1.5</ins><strong>Wat verwachten wij van jou?</strong>
+                <span class="g">*</span> Basiskennis HTML en CSS<ins>.5</ins>
+                <span class="g">*</span> Je weet dat je uit je <kbd>fouten</kbd> alleen maar kan leren<ins>.5</ins>
+                <span class="g">*</span> Je bent niet bang om soms <del>heeeeeeeeelemaam opnieuw</del> helemaal opnieuw
+                te beginnen. <ins>.5</ins>
+                <span class="g">*</span> Je bent een volhouder.<s>250</s> Soms lijk je niet vooruit te komen.
+                <s>10</s>Maar dan ben je ineens ben je vertrokken!<span
+                    style="border-bottom:1px dashed #0bf446;"></span>
+                <button>Meer weten</button>
+            </div>
+
+            <div class="col-7"></div>
+            <div id="tooltip" class="col-5">
+                <img id="yoda" src="images/yoda.png" alt="yoda">
+            </div>
+        </div>
+    </div>
+
+    <!-- PRAKTISCHE INFO - Section 2 -->
+
+    <div class="left main" id="page2">
+        <div class="content left">
+            <h2 id="jquery">jQuery</h2>
+            <div id="tabs">
+                <ul>
+                    <li><a href="#tabs-1">Wat leer je in deze cursus?</a></li>
+                    <li><a href="#tabs-2">Second</a></li>
+                    <li><a href="#tabs-3">Third</a></li>
+                </ul>
+                <div id="tabs-1">
+                    <ul id="cursus-lijst">
+                        <li><b>Basistechnieken</b> jQuery – implementatie script</li>
+                        <li><b>Selectors – selecteren </b>van elementen op de pagina</li>
+                        <li><b> – gebeurtenissen opsporen en afhandelen</b> (bijvoorbeeld een muisklik,<br>
+                            over een afbeelding hoveren,…)</li>
+                        <li><b>Effects – fade, slide, toggle,…</b></li>
+                        <li><b>jQuery UI </b>– gebruikers interactie elementen toevoegen en instellen</li>
+                        <li><b>Animatie</b> met jQuery</li>
+                        <li>Hoe <b>plugins</b>selecteren, toevoegen en instellen</li>
+                        <li><b>JSON en AJAX </b>– externe data inlezen en wegschrijven, zonder een pagina refresh
+                            <br> te
+                            doen
+                        </li>
+                        <li>Een <b>parallax effect </b>toevoegen</li>
+                        <li>Een eigen <b>plugin definiëren</b></li>
+                    </ul>
+                </div>
+                <div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet
+                    ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+                <div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi
+                    urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper
+                    augue.</div>
+            </div>
+            <br>
+            <h3 class="titel">Inschrijf plaatsen :</h3>
+            <div id="progressbar"></div>
+            <br>
+            <button id="button">Inschrijven</button>
+        </div>
+    </div>
+
+    <div class="right">
+        <div id="accordion">
+            <h3>Online op je eigen tempo</h3>
+            <ul class="lijst">
+                <li>100% <b>Online</b></li>
+                <li><b>Onmiddellijk start</b> na goedkeuring bij inschrijving</li>
+                <li>Tot <b>30 juni 2022</b></li>
+                <li>Je kan uitschrijven <b>tot 7 dagen </b>na je toegang tot de cursus</li>
+                <h4 class="subtitel">Prijs</h4>
+                <p class="curcus-info">Cursusmateriaal en digitale leeromgeving : <b>4€</b></p>
+                <p class="curcus-info">inschrijvingsgeld : <b>90€</b></p>
+                <hr>
+                <p class="curcus-info">Totaal voor deze cursus : <b>94€</b></p>
+            </ul>
+
+
+            <h3>Cursustraject</h3>
+            <ul class="lijst">
+                <li>100% Op <b>school</b></li>
+                <li>Een <b>volledig schooljaar</b> lang</li>
+                <li>15x <b>60</b> Lestijden</li>
+                <li>Je kan uitschrijven <b>tot 7 dagen</b> na je toegang tot de cursus</li>
+                <h4 class="subtitel">Prijs</h4>
+                <p class="curcus-info">Cursusmateriaal en digitale leeromgeving : <b>4€</b></p>
+                <p class="curcus-info">inschrijvingsgeld : <b>90€</b></p>
+                <hr>
+                <p class="curcus-info">Totaal voor deze cursus : <b>94€</b></p>
+            </ul>
+
+
+            <h3>Extra informatie</h3>
+            <ul class="lijst">
+                <li>Je kan <b>vlot</b> met een computer en internet werken.</li>
+                <li>Je kent <b>HTML</b> en <b>basis programmeertechnieken</b>.</li>
+                <hr>
+            </ul>
+
+
+            <h3>Voordelen</h3>
+            <ul class="lijst">
+                <h4>Vlaams opleidingsverlof</h4>
+                <li>Ja! Je kan als werknemer tot <b>60 uren Vlaams opleidingsverlof </b> opnemen voor deze
+                    cursus.</b>.</li>
+                <h4>Opleidingscheques</h4>
+                <li>Ja! Je kan <b>€ 47 besparen </b> op deze cursus door hem te betalen met opleidingscheques. Heb
+                    je <b>geen diploma secundair onderwijs</b>, dan kan je <b>tot € 94 besparen.</b></li>
+                <hr>
+            </ul>
+
+
+            <h3>Kortingen</h3>
+            <ul class="lijst">
+                <h4>Verminderd inschrijvingsgeld</h4>
+                <li>Tijdens je <b>online inschrijving</b> betaal je het standaard inschrijvingstarief.</li>
+                <h4>Bepaalde kortingen krijg je automatisch toegekend.</h4>
+                <li>We kijken voor <b>elke inschrijving</b> na of je voor iets in aanmerking komt.</li>
+                <h4>Kan je zelf aantonen dat je recht hebt op een korting?</h4>
+                <li>Bezorg dan de nodige attesten via <b>cursistenloket@cvodeverdieping.be</b> of geef ze
+                    persoonlijk af in het cursistenloket.</li>
+                <h4>Heb je recht op verminderd inschrijvingsgeld?</h4>
+                <li>Dan <b>storten we het kortingsbedrag</b> zo snel mogelijk terug op jouw rekening</li>
+                <hr>
+                <h4>Gemeentekorting</h4>
+                <li>Ben je tussen <b>16 en 18 jaar </b>of <b>ouder dan 62</b> op het moment van je inschrijving? Dan
+                    krijg je mogelijk een korting van gemeente Heusden-Zolder.</li>
+                <li><b>Meld je aan</b> om te weten of je voor deze cursus recht hebt op de gemeentekorting.</li>
+            </ul>
+        </div>
+        <br><br>
+        <img class="img" src="images/jquery.jpg" alt="jquery">
+    </div>
+
+
+    <!-- INSCHRIJVEN - Section 3 -->
+
+    <!-- ???- Section 4 -->
+
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script> <!-- 3.3.1 -->
+    <script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script>
+    <script type="text/javascript"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            //menu
+            $(".drop")
+                .mouseover(function () {
+                    $(".dropdown").show(300);
+                });
+            $(".drop")
+                .mouseleave(function () {
+                    $(".dropdown").hide(300);
+                });
+
+
+
+            //scrollen tussen secties
+            $('a[href^="#"]').on('click', function (event) {
+
+                let target = $(this.getAttribute('href'));
+
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+
+            });
+
+            //automatisch typen (plugin -t.js)
+            $(function () {
+                $('#t').t({
+
+                    delay: 2,                   // start delay in seconds [default:0]
+
+                    speed: 50,                  // typing speed (ms) [default:50]
+                    speed_vary: false,          // 'human like' speed variation [default:false]
+
+                    beep: false,                 // beep while typing (Web Audio API) [default:false]
+
+                    mistype: 3,                 // mistype rate: 1:N per char [default:false]
+                    locale: 'en',               // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
+
+                    caret: '\u2589',            // caret content; can be html too [default:true (\u258e)]
+                    blink: true,                // blink-interval in ms; if TRUE, speed*3  [default:true]
+                    blink_perm: false,          // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
+                    repeat: 0,                  // repeat typing: if TRUE, infinite or N times [default:0]
+                    tag: 'span',                // wrapper tag (.t-container, .t-caret) [default:'span']
+                    pause_on_click: true,       // pauses/continues typing on click/tap (elm) [default:false]
+                    pause_on_tab_switch: true,  // pauses typing if window is inactive (Page Visibility API) [default:false]
+
+                    // init callback (ready-to-type)
+                    init: function (elm) { },
+                    // typing callback
+                    typing: function (elm, chr_or_elm, left, total) { },
+                    // finished callback
+                    fin: function (elm) { }
+                });
+            });
+
+            //yoda met tips
+
+            $("div#tooltip")
+                .on('mouseenter', function showTooltip() {
+                    $('<div class="tooltip">Patience you must have.</div>').appendTo('body');
+                })
+                .on('mouseleave', function hideTooltip() {
+                    $('div.tooltip').remove();
+                })
+
+                .on('mousemove', function changeTooltipPos(event) {
+                    let tooltipX = event.pageX - 10;
+                    let tooltipY = event.pageY + 10;
+                    $('div.tooltip').css({ top: tooltipY, left: tooltipX });
+                });
+
+
+            //sectie 2
+
+            $('.container').fadeOut(1500, function () {
+                $('.container').fadeIn(2000, function () {
+                });
+            })
+
+            $("#accordion").accordion({
+                icons: { "header": "ui-icon-plus" },
+                active: false,
+                collapsible: true,
+            });
+
+            $("#tabs").tabs();
+
+            $("#button").button();
+
+
+            $('.img').mouseenter(function () {
+                $(this).animate({
+                    width: '65%',
+                    height: '38%'
+                })
+            })
+            $('.img').mouseleave(function () {
+                $(this).animate({
+                    width: '50%',
+                    height: '28%'
+                })
+            })
+
+            $("#jquery").hover(function () {
+                $(this).effect("shake", { times: 3 }, 100);
+            });
+
+            $("#progressbar").progressbar({
+                value: 60
+            });
+
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

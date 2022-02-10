@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300&family=Work+Sans:wght@200;300;400;500;700&display=swap');
+
+
+
+:root {
+  --main-color: #CE52CF;
+  --background: black;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: #000000;
+  font-family: "Roboto";
+  color: white;
+}
+
+#site-landing {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+#cursustitel {
+  margin: auto;
+  text-align: center;
+  margin-top: 14%;
+  font-size: 4em;
+  color: var(--main-color);
+  font-size: 60px;
+  z-index: 900;
+}
+
+/* Menu
+ * --------------------------------------- */
+
+#menu {
+  position: fixed;
+  height: 40px;
+  z-index: 70;
+  right: 10%;
+}
+
+#logo {
+  z-index: 71;
+  position: absolute;
+  margin-top: 35px;
+  left: 10%;
+}
+
+.tekst {
+  margin: auto;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Roboto";
+}
+
+#t {
+  white-space: pre-wrap;
+  color: white;
+  font-family: "Roboto";
+  font-size: 18px;
+  margin-top: 40px;
+  text-align: center;
+  z-index: 900;
+}
+
+.g {
+  color: var(--main-color);
+}
+
+#type {
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+}
+
+ins,
+del {
+  text-decoration: none;
+}
+
+s {
+  display: none;
+}
+
+kbd {
+  font-family: inherit;
+}
+
+.t-caret {
+  font-size: inherit;
+  color: var(--main-color);
+}
+
+.fa-chevron-down {
+  color: var(--main-color);
+  font-size: 36px;
+  position: fixed;
+  bottom: 20px;
+  left: 52%;
+}
+
+.fa-bars {
+  font-size: 40px;
+  padding: 10px 8px;
+}
+
+
+/* full page menu
+ * --------------------------------------- */
+
+hgroup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: var(--main-color);
+}
+
+h3.nav02 {
+  position: absolute;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-size: 32px;
+  top: 20px;
+  right: 100px;
+}
+
+/*** button ***/
+
+button {
+  color: black;
+  font-size: 20px;
+  border: 1px solid var(--background);
+  border-radius: 2px;
+  margin: 3px;
+  margin-top: 100px;
+  padding-left: 12px;
+  padding-right: 12px;
+  line-height: 32px;
+  transition: all 200ms ease-in-out;
+  background-color: var(--main-color);
+  cursor: pointer;
+}
+
+
+
+/*--- Nav Drop down --*/
+
+nav.drop-down {
+  background-color: var(--main-color);
+  text-align: center;
+  top: -100vh;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: column;
+  z-index: 999;
+}
+
+
+nav.drop-down li {
+  line-height: 30px;
+  font-family: Roboto;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+nav.drop-down a {
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 36px;
+}

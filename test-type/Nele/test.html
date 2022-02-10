@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <link rel="stylesheet" href="layouts.css">
+    <title>Cursus jQuery</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="images/logo2.png" alt="Logo">
+        </div>
+
+        <ul id="menu">
+            <li data-menuanchor="page1" class="active"><a href="#page1">jQuery</a></li>
+            <li data-menuanchor="page2"><a href="#page2">Praktische info</a></li>
+            <li data-menuanchor="page3"><a href="#page3">Inschrijven</a></li>
+            <li data-menuanchor="page4"><a href="#page4">Sectie 4</a></li>
+        </ul>
+
+    </header>
+
+    <!-- HOME - Section 1-->
+    <div class="main" id="page1">
+        <div class="left">
+            <div id="t">
+                <strong id="type">Hey jij!</strong><br>
+                <ins>1.5</ins>Wil je leren hoe je<em> <del>koe<ins>1</ins></del>coole </em>effecten zoals deze kan
+                maken met <kbd>jQuery</kbd>?<br>
+                <strong>Dat en nog veel meer leer je in deze cursus</strong><ins>1</ins>
+                <span class="g">*</span> Events opsporen en afhandelen (muisklik, hover) <ins>.5</ins>
+                <span class="g">*</span> Effects (fade, slide, toggle) en animatie<ins>.5</ins>
+                <span class="g">*</span> Plugins (zoals deze) selecteren en implementeren<ins>.5</ins>
+                <span class="g">*</span> Externe data inlezen (JSON en AJAX)<ins>.5</ins><br>
+                <ins>1.5</ins><strong>Wat verwachten wij van jou?</strong>
+                <span class="g">*</span> Basiskennis HTML en CSS<ins>.5</ins>
+                <span class="g">*</span> Je weet dat je uit je <kbd>fouten</kbd> alleen maar kan leren<ins>.5</ins>
+                <span class="g">*</span> Je bent niet bang om soms <del>heeeeeeeeelemaam opnieuw</del> helemaal opnieuw
+                te beginnen. <ins>.5</ins>
+                <span class="g">*</span> Je bent een volhouder.<s>250</s> Soms lijk je niet vooruit te komen.
+                <s>10</s>Maar dan ben je ineens ben je vertrokken!<span
+                    style="border-bottom:1px dashed #0bf446;"></span>
+                <button>Meer weten</button>
+            </div>
+
+            <div class="col-7"></div>
+            <div id="tooltip" class="col-5">
+                <img id="yoda" src="images/yoda.png" alt="yoda">
+            </div>
+        </div>
+    </div>
+
+    <!-- PRAKTISCHE INFO - Section 2 -->
+    <div class="main" id="page2">
+        <div class="row">
+             <div class="col-7"></div>
+            <div id="tooltip" class="col-5">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda non commodi sequi maxime porro ad eos adipisci magni sapiente. Debitis doloremque doloribus error facere, cum. Dignissimos dolorum similique magnam omnis!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- INSCHRIJVEN - Section 3 -->
+    <div class="main" id="page3">
+       <div id="tooltip" class="col-5">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda non commodi sequi maxime porro ad eos adipisci magni sapiente. Debitis doloremque doloribus error facere, cum. Dignissimos dolorum similique magnam omnis!</p>
+            </div>
+    </div>
+
+    <!-- ???- Section 4 -->
+    <div class="main" id="page4">
+        <div class="row"></div>
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script> <!-- 3.3.1 -->
+    <script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script>
+    <script type="text/javascript"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            //scrollen tussen secties
+            $('a[href^="#"]').on('click', function (event) {
+
+                let target = $(this.getAttribute('href'));
+
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+
+            });
+
+            //automatisch typen (plugin -t.js)
+            $(function () {
+                $('#t').t({
+
+                    delay: 2,                   // start delay in seconds [default:0]
+
+                    speed: 50,                  // typing speed (ms) [default:50]
+                    speed_vary: false,          // 'human like' speed variation [default:false]
+
+                    beep: true,                 // beep while typing (Web Audio API) [default:false]
+
+                    mistype: 3,                 // mistype rate: 1:N per char [default:false]
+                    locale: 'en',               // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
+
+                    caret: '\u2589',            // caret content; can be html too [default:true (\u258e)]
+                    blink: true,                // blink-interval in ms; if TRUE, speed*3  [default:true]
+                    blink_perm: false,          // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
+                    repeat: 0,                  // repeat typing: if TRUE, infinite or N times [default:0]
+                    tag: 'span',                // wrapper tag (.t-container, .t-caret) [default:'span']
+                    pause_on_click: true,       // pauses/continues typing on click/tap (elm) [default:false]
+                    pause_on_tab_switch: true,  // pauses typing if window is inactive (Page Visibility API) [default:false]
+
+                    // init callback (ready-to-type)
+                    init: function (elm) { },
+                    // typing callback
+                    typing: function (elm, chr_or_elm, left, total) { },
+                    // finished callback
+                    fin: function (elm) { }
+                });
+            });
+
+            //yoda met tips
+
+            $("div#tooltip")
+                .on('mouseenter', function showTooltip() {
+                    $('<div class="tooltip">Patience you must have.</div>').appendTo('body');
+                })
+                .on('mouseleave', function hideTooltip() {
+                    $('div.tooltip').remove();
+                })
+
+                .on('mousemove', function changeTooltipPos(event) {
+                    let tooltipX = event.pageX - 10;
+                    let tooltipY = event.pageY + 10;
+                    $('div.tooltip').css({ top: tooltipY, left: tooltipX });
+                });
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

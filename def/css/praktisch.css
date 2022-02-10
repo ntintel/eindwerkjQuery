@@ -1,0 +1,90 @@
+/* Jasmine */
+body {
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container2 {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    margin: auto;
+}
+
+p {
+    color: #fff;
+}
+
+#logo {
+    z-index: 71;
+    position: absolute;
+    margin-top: 35px;
+    left: 10%;
+}
+
+#accordion,
+.content {
+    margin-top: 29%;
+}
+
+#accordion {
+    margin-top: 37%;
+}
+
+#jquery {
+    color: #CE52CF;
+    font-size: 32px;
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+.titel {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    margin-left: 20%;
+}
+
+.subtitel {
+    color: #CE52CF;
+}
+
+#cursus-lijst li {
+    text-align: left;
+    color: #2C3E50;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    font-size: 14px;
+    list-style-type: square;
+}
+
+.cursus-info {
+    color: #333
+}
+
+.lijst {
+    color: #2C3E50;
+    list-style-type: square;
+    font-size: 15px;
+}
+
+.img {
+    width: 45%;
+    height: 28%;
+    box-shadow: 1px 2px 60px black;
+}
+
+h1 {
+    color: #CE52CF;
+    font-size: 50px;
+
+}
+
+.centreren {
+    margin: auto;
+    text-align: center;
+    margin-top: 15%;
+}
+
+/* -- */

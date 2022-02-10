@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js-homepage/polygonizr.min.js"></script>
+    <link rel="stylesheet" href="css/examples.css">
+    <title>Cursus jQuery</title>
+</head>
+
+<body>
+    <div id="site-landing">
+        <div id="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <main id="menu">
+            <hgroup>
+                <button class="btn02"><i class="fa-solid fa-bars"></i></button>
+            </hgroup>
+        </main>
+        <nav class="drop-down">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wat-is-jquery.html">Wat is jQuery?</a></li>
+                <li><a href="praktisch.html">Praktische info</a></li>
+                <li><a href="inschrijven.html">Inschrijven</a></li>
+            </ul>
+            <h3 class="nav02">x</h3>
+        </nav>
+
+        <!-- Code Nele hieronder -->
+        <div class="section" id="page1">
+            <div class="container">
+                <h1 class="animate__animated animate__bounceInUp" id="cursustitel">Cursus jQuery</h1>
+                <!-- <div class="left"> -->
+                <div id="t">
+                    <strong id="type">Hey jij!</strong><br>
+                    <ins>1</ins>Wil je leren hoe je <del>koe<ins>1</ins></del>coole effecten zoals deze
+                    kan maken met <kbd>jQuery</kbd>?<br>
+                    <ins>1.5</ins><strong>Ben je iemand die</strong>
+                    <span class="g">*</span> weet dat je uit je <kbd>fouten</kbd> alleen maar kan leren?<ins>.5</ins>
+                    <span class="g">*</span> niet bang is om soms <del>heeeeeeeeelemaam opnieuw</del> helemaal opnieuw
+                    te moeten beginnen? <ins>.5</ins>
+                    <span class="g">*</span> kan volhouden?<s>250</s> Soms lijk je niet vooruit te komen.<s>10</s>Maar
+                    dan ben je ineens vertrokken!<span style="border-bottom:1px dashed #0bf446;"></span>
+                </div>
+                <div id="arrow" <i class="fa-solid fa-chevron-down animate__animated animate__heartBeat"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/t.js"></script>
+    <script src="js/t.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            // --- Full page dropdown menu
+            $('.btn02').click(function () {
+                $('.drop-down').animate({ top: "0px" }, 600);
+            });
+
+            $('h3.nav02').click(function () {
+                $('.drop-down').animate({ top: "-100vh" }, 600);
+            });
+
+
+
+
+            //--- Titel Home
+            let $titel = $('#cursustitel')
+            $titel.on('click', function () {
+                $titel.addClass('animate__flash');
+                window.setTimeout(function () {
+                    $titel.removeClass('animate__flash');
+                }, 200);
+            });
+
+
+
+
+            // --- Achtergond polygon
+            let $sitelading = $('#site-landing');
+            $sitelading.polygonizr();
+
+            // Update size.
+            $(window).resize(function () {
+                $sitelading.polygonizr("stop");
+                $sitelading.polygonizr({
+                    canvasHeight: $(this).height(),
+                    canvasWidth: $(this).width()
+                });
+
+                $sitelading.polygonizr("refresh");
+            });
+
+            // --- Typewriter plugin
+            $(function () {
+                $('#t').t({
+
+                    delay: 2,                   // start delay in seconds [default:0]
+                    speed: 50,                  // typing speed (ms) [default:50]
+                    speed_vary: false,          // 'human like' speed variation [default:false]
+                    beep: false,                 // beep while typing (Web Audio API) [default:false]
+                    mistype: 3,                 // mistype rate: 1:N per char [default:false]
+                    locale: 'en',               // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
+                    caret: '\u2589',            // caret content; can be html too [default:true (\u258e)]
+                    blink: true,                // blink-interval in ms; if TRUE, speed*3  [default:true]
+                    blink_perm: false,          // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
+                    repeat: 0,                  // repeat typing: if TRUE, infinite or N times [default:0]
+                    tag: 'span',                // wrapper tag (.t-container, .t-caret) [default:'span']
+                    pause_on_click: true,       // pauses/continues typing on click/tap (elm) [default:false]
+                    pause_on_tab_switch: true,  // pauses typing if window is inactive (Page Visibility API) [default:false]
+
+                    // init callback (ready-to-type)
+                    init: function (elm) { },
+                    // typing callback
+                    typing: function (elm, chr_or_elm, left, total) { },
+                    // finished callback
+                    fin: function (elm) { }
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>

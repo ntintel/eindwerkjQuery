@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <title>Inschrijven</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/examples.css">
+
+</head>
+
+<body>
+    <div id="site-landing">
+        <div id="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <main id="menu">
+            <hgroup>
+                <button class="btn02"><i class="fa-solid fa-bars"></i></button>
+            </hgroup>
+        </main>
+        <nav class="drop-down">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wat-is-jquery.html">Wat is jQuery?</a></li>
+                <li><a href="praktisch.html">Praktische info</a></li>
+                <li><a href="inschrijven.html">Inschrijven</a></li>
+            </ul>
+            <h3 class="nav02">x</h3>
+        </nav>
+
+
+        <br><br><br>
+        <!-- Code Davy hieronder -->
+        <div class="inschrijven">
+            <div class="container3">
+                <div class="left">
+                    <h1 class="h1-mg2">jQuery</h1>
+                    <p class="white">Programmeer eenvoudig en snel met jQuery. Deze rijke, snelle en elegante
+                        uitbreiding op
+                        JavaScript is open source – er is een uitgebreide documentatie voorzien en een zeer actieve
+                        community. Daardoor wordt er heel regelmatig een update uitgebracht en verschijnen er constant
+                        nieuwe plugins. jQuery is een verzameling van functies die de oorspronkelijke JavaScript
+                        functies uitbreiden. Je hebt complete controle over de DOM (Document Object Model), met andere
+                        woorden de elementen in je HTML-pagina. jQuery ondersteunt alle populaire en minder populaire
+                        browsers.</p>
+                    <div class="border-1"></div>
+                    <p class="white">Je wilt je inschrijven voor de cursus jQuery. Dat gaat gemakkelijk.
+                        Vul rechts in inschrijfformulier in. Wanneer je de inschrijving
+                        hebt afgerond, ontvang je nog een bevestigingsmail.</p>
+                    <input type="submit" class="openBtn" href="javascript:void(0)" value="Bekijk alle inschrijvingen">
+                    <div class="popup">
+                        <div class="popup-content">
+                            <h1 class="h1-mg2 white">Inschrijvingen cursus jQuery</h1>
+                            <div id="box"></div>
+
+                            <a class="closeBtn" href="javascript:void(0)">x</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="right contactform box">
+                    <div class="ribbon"><span>NIEUW</span></div>
+                    <h1 class="h1-mg">Inschrijfformulier</h1>
+                    <form method="post" action="submit_to_db_pdo.php">
+                        <div id="container">
+                            <label>
+                                <p class="label-txt">Volledige naam</p>
+                                <input type="text" id="naam" class="input">
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </label>
+                            <label>
+                                <p class="label-txt">E-mail</p>
+                                <input type="email" id="email" class="input">
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </label>
+                            <label>
+                                <p class="label-txt">Opleidingstraject</p>
+                                <input type="text" id="opleidingstraject" placeholder="V-School of cursustraject"
+                                    class="input">
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </label>
+                            <input type="submit" name="submit" id="submit" value="Schrijf me in!" />
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="container-footer">
+                <p>Copyright © CVO De Verdieping</p>
+            </div>
+        </footer>
+
+        <script src="js/t.js"></script>
+        <script src="js/t.min.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                // --- Full page dropdown menu
+                $('.btn02').click(function () {
+                    $('.drop-down').animate({ top: "0px" }, 600);
+                });
+
+                $('h3.nav02').click(function () {
+                    $('.drop-down').animate({ top: "-100vh" }, 600);
+                });
+
+                // Inschrijfformulier Davy
+                $('input').focus(function () {
+                    $(this).parent().find(".label-txt").addClass('label-active');
+                });
+
+                $("input").focusout(function () {
+                    if ($(this).val() == '') {
+                        $(this).parent().find(".label-txt").removeClass('label-active');
+                    };
+                });
+
+                // Formulier data toevoegen aan database Davy
+                let $container = $("#container");
+                let $naam = $("#naam");
+                let $email = $("#email");
+                let $opleidingstraject = $("#opleidingstraject");
+
+                $('#submit').click(function (e) {
+                    $('#errorMsg').remove();
+                    $container.append('<img src="images/loading.gif" alt="Loading" id="loading" />');
+                    let naamVal = $naam.val();
+                    let emailVal = $email.val();
+                    let opleidingstrajectVal = $opleidingstraject.val();
+                    e.preventDefault();
+                    if (naamVal != "" && emailVal != "" && opleidingstrajectVal != "") {
+                        $.ajax({
+                            url: 'submit_to_db_pdo.php',
+                            type: 'POST',
+                            data: 'naam=' + naamVal + '&email=' + emailVal + '&opleidingstraject=' + opleidingstrajectVal,
+                            success: function (result) {
+                                $('#response').remove();
+                                $container.append('<p id="response">' + result + '</p>');
+                                $('#loading').fadeOut(500, function () {
+                                    $(this).remove();
+                                });
+                                $naam.val("");
+                                $email.val("");
+                                $opleidingstraject.val("");
+
+                            }
+
+                        });
+                    } else {
+                        $container.append("<p id='errorMsg'>Niet alle velden zijn ingevuld!</p>");
+                        $('#loading').fadeOut(500, function () {
+                            $(this).remove();
+                        });
+
+                    }
+
+                });
+
+
+                // Data opvragen uit database Davy
+                $.ajax({
+                    url: 'opvragen.php',
+                    type: 'GET',
+                    success: function (result) {
+                        $('#box').append(result);
+                    }
+                });
+
+
+                //POPUP Davy
+                // Open Popup
+                $('.openBtn').on('click', function () {
+                    $('.popup').fadeIn(300);
+                });
+
+                // Close Popup
+                $('.closeBtn').on('click', function () {
+                    $('.popup').fadeOut(300);
+                });
+
+                // Close Popup when Click outside
+                $('.popup').on('click', function () {
+                    $('.popup').fadeOut(300);
+                }).children().click(function () {
+                    return false;
+                });
+            })
+        </script>
+</body>
+
+</html>

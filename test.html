@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+    <link rel="stylesheet" type="text/css" href="examples.css" />
+    <link rel="stylesheet" href="layouts.css">
+    <title>Cursus jQuery</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="t">
+            <strong id="type">Hey jij!</strong><br>
+            <ins>1.5</ins>Wil je leren hoe je<em> <del>koe<ins>1</ins></del>coole </em>effecten zoals deze kan maken
+            met <kbd>jQuery</kbd>?<br>
+            <strong>Dat en nog veel meer leer je in deze cursus:</strong><ins>1</ins>
+            <span class="g">*</span> Events – gebeurtenissen opsporen en afhandelen (muisklik, hover)<ins>.5</ins>
+            <span class="g">*</span> Effects (fade, slide, toggle) en animatie<ins>.5</ins>
+            <span class="g">*</span> Plugins (zoals deze) selecteren en implementeren<ins>.5</ins>
+            <span class="g">*</span> Externe data inlezen (JSON en AJAX)<ins>.5</ins><br>
+            <ins>1.5</ins><strong>Wat verwachten wij van jou?</strong>
+            <span class="g">*</span> Basiskennis HTML en CSS<ins>.5</ins>
+            <span class="g">*</span> Je weet dat je uit je <kbd>fouten</kbd> alleen maar kan leren<ins>.5</ins>
+            <span class="g">*</span> Je bent niet bang om soms <del>heeeeeeeeelemaam opnieuw</del>helemaal opnieuw te
+            beginnen.<ins>.5</ins>
+            <span class="g">*</span> Je bent een volhouder.<s>250</s> Soms lijk je niet vooruit te komen. <s>10</s>Maar
+            dan ineens ben je vertrokken!<span style="border-bottom:1px dashed magenta;"></span>
+            <button>Meer weten</button>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script> <!-- 3.3.1 -->
+    <script src="https://cdn.jsdelivr.net/gh/mntn-dev/t.js/t.min.js"></script>
+    <script type="text/javascript"></script>
+    <script>
+
+
+        $(function () {
+            $('#t').t({
+
+                delay: 2,                   // start delay in seconds [default:0]
+
+                speed: 50,                  // typing speed (ms) [default:50]
+                speed_vary: false,          // 'human like' speed variation [default:false]
+
+                beep: true,                 // beep while typing (Web Audio API) [default:false]
+
+                mistype: 3,                 // mistype rate: 1:N per char [default:false]
+                locale: 'en',               // keyboard layout (to fit mistype); supported: 'en' (english) or 'de' (german) [default:'en']
+
+                caret: '\u2589',            // caret content; can be html too [default:true (\u258e)]
+                blink: true,                // blink-interval in ms; if TRUE, speed*3  [default:true]
+                blink_perm: false,          // permanent blinking? if FALSE, caret blinks only on delay/pause/finish [default:false]
+                repeat: 0,                  // repeat typing: if TRUE, infinite or N times [default:0]
+                tag: 'span',                // wrapper tag (.t-container, .t-caret) [default:'span']
+                pause_on_click: true,       // pauses/continues typing on click/tap (elm) [default:false]
+                pause_on_tab_switch: true,  // pauses typing if window is inactive (Page Visibility API) [default:false]
+
+                // init callback (ready-to-type)
+                init: function (elm) { },
+                // typing callback
+                typing: function (elm, chr_or_elm, left, total) { },
+                // finished callback
+                fin: function (elm) { }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
