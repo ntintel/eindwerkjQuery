@@ -73,14 +73,17 @@
 	margin: 2px 0 0 0;
 	padding: .5em .5em .5em .7em;
 	font-size: 100%;
-	margin-right: 17%;
+	width: 70%;
+	box-sizing: border-box;
+
 }
 
 .ui-accordion .ui-accordion-content {
 	padding: 1em 2.2em;
 	border-top: 0;
 	overflow: auto;
-	width: 75%;
+	width: 70%;
+	box-sizing: border-box;
 }
 
 .ui-autocomplete {

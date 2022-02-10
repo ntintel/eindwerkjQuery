@@ -1,7 +1,7 @@
 /* Jasmine */
 body {
     background-color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto";
 }
 
 #container2 {
@@ -24,14 +24,14 @@ p {
     left: 10%;
 }
 
-#accordion,
 .content {
-    margin-top: 29%;
+    margin-top: 30%;
 }
 
 #accordion {
-    margin-top: 37%;
+    margin-top: 20px;
 }
+
 
 #jquery {
     color: #CE52CF;
@@ -53,7 +53,7 @@ p {
 #cursus-lijst li {
     text-align: left;
     color: #2C3E50;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto";
     line-height: 24px;
     font-size: 14px;
     list-style-type: square;
@@ -67,24 +67,13 @@ p {
     color: #2C3E50;
     list-style-type: square;
     font-size: 15px;
+    line-height: 24px;
 }
 
 .img {
-    width: 45%;
+    width: 50%;
     height: 28%;
     box-shadow: 1px 2px 60px black;
-}
-
-h1 {
-    color: #CE52CF;
-    font-size: 50px;
-
-}
-
-.centreren {
-    margin: auto;
-    text-align: center;
-    margin-top: 15%;
 }
 
 /* -- */
