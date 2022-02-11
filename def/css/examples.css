@@ -110,17 +110,43 @@ kbd {
   color: var(--main-color);
 }
 
-.fa-chevron-down {
+.fa-chevron-left {
   color: var(--main-color);
   font-size: 50px;
   position: fixed;
-  bottom: 20px;
-  left: 50%;
+  bottom: 50%;
+  left: 2;
+}
+
+.fa-chevron-right {
+  color: var(--main-color);
+  font-size: 50px;
+  position: fixed;
+  bottom: 50%;
+  right: 20px;
 }
 
 .fa-bars {
   font-size: 40px;
   padding: 10px 8px;
+}
+
+#arrow1 {
+  position: fixed;
+  bottom: 50%;
+  cursor: pointer;
+  left: 20px;
+}
+
+#arrow2 {
+  position: fixed;
+  bottom: 50%;
+  cursor: pointer;
+  right: 0;
+}
+
+.animate__animated.animate__bounceInUp {
+  --animate-duration: 1600ms;
 }
 
 /* full page menu
@@ -136,6 +162,7 @@ hgroup {
 h1 {
   color: var(--main-color);
 }
+
 
 h3.nav02 {
   position: absolute;

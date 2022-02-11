@@ -39,7 +39,7 @@
         <!-- Code Nele hieronder -->
         <div class="section" id="page1">
             <div class="container">
-                <h1 class="animate__animated animate__bounceInUp" id="cursustitel">Cursus jQuery</h1>
+                <h1 class="animate__animated animate__bounceInUp opacity" id="cursustitel"></h1>
                 <!-- <div class="left"> -->
                 <div id="t">
                     <strong id="type">Hey jij!</strong><br><br>
@@ -57,7 +57,13 @@
             </div>
         </div>
     </div>
-    <a href="wat-is-jquery.html"><i class="fa-solid fa-chevron-down animate__animated animate__heartBeat"></i></a>
+    <div id="arrow1">
+        <a href="inschrijven.html"><i class="fa-solid fa-chevron-left"></i></a>
+    </div>
+    <div id="arrow2">
+        <a href="wat-is-jquery.html"><i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+
 
     <script src="js/t.js"></script>
     <script src="js/t.min.js"></script>
@@ -65,6 +71,9 @@
 
     <script>
         $(document).ready(function () {
+            $("h1").text("Cursus jQuery");
+
+
             // --- FULL PAGE DROPDOWN MENU - NELE
             let $dropdown = $('.drop-down')
             $('.btn02').click(function () {
@@ -75,13 +84,13 @@
             });
 
             //--- TITEL - NELE
-            let $titel = $('#cursustitel')
-            $titel.on('click', function () {
-                $titel.addClass('animate__flash');
-                window.setTimeout(function () {
-                    $titel.removeClass('animate__flash');
-                }, 200);
-            });
+            //let $titel = $('#cursustitel')
+            //$titel.on('hover', function () {
+            //    $titel.addClass('animate__flash');
+            //    window.setTimeout(function () {
+            //        $titel.removeClass('animate__flash');
+            //   }, 200);
+            //});
 
             // --- ACHTERGROND POLYGON- JASMIEN
             let $sitelading = $('#site-landing');
@@ -118,7 +127,7 @@
                     fin: function (elm) { }
                 });
             });
-        })
+        });
     </script>
 </body>
 
