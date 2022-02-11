@@ -29,37 +29,46 @@
             width: 30px;
             height: 30px;
         }
+
+        .mg {
+            margin-top: 0;
+        }
+
+        .ml {
+            margin-left: 5px;
+        }
     </style>
 </head>
 
 <body>
-    <p class="ajax">Klik op de knoppen om te zien wat je met jQuery kan</p>
-    <button class="animate-btn" id="slideup">Slide Up</button>
-    <button class="animate-btn" id="slidedown">Slide down</button>
+    <button type="button" class="hide-btn mg">Hide Paragraphs</button>
+    <button type="button" class="show-btn mg">Show Paragraphs</button>
+    <p class="very-fast ml">This paragraph will show/hide with very fast speed.</p>
+    <p class="fast ml">This paragraph will show/hide with fast speed.</p>
+    <p class="very-slow ml">This paragraph will show/hide with very slow speed.</p>
+
 
 
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery-ui.js"></script>
     <script>
         $(document).ready(function () {
-            // img word groter met hover Jasmine
-            /* $('.img').mouseenter(function () {
-                 $(this).animate({
-                     width: '65%',
-                     height: '38%'
-                 })
-             })
-             $('.img').mouseleave(function () {
-                 $(this).animate({
-                     width: '50%',
-                     height: '28%'
-                 })
-             })*/
-            $("#slideup").click(function () {
-                $(".ajax").slideUp();
+            // Hide displayed paragraphs with different speeds
+            $(".hide-btn").click(function () {
+                $("p.normal").hide();
+                $("p.fast").hide("fast");
+                $("p.slow").hide("slow");
+                $("p.very-fast").hide(50);
+                $("p.very-slow").hide(2000);
             });
-            $("#slidedown").click(function () {
-                $(".ajax").slideDown();
+
+            // Show hidden paragraphs with different speeds
+            $(".show-btn").click(function () {
+                $("p.normal").show();
+                $("p.fast").show("fast");
+                $("p.slow").show("slow");
+                $("p.very-fast").show(50);
+                $("p.very-slow").show(2000);
             });
 
         });
