@@ -88,22 +88,6 @@ $(document).ready(function () {
         $(".ajax").show();
     }));
 
-    // img word groter met hover Jasmine
-    $('.img').on('mouseenter', (function () {
-        $(this).animate({
-            width: '65%',
-            height: '38%'
-        })
-    }));
-
-    $('.img').on('mouseleave', (function () {
-        $(this).animate({
-            width: '50%',
-            height: '28%'
-        })
-    }));
-
-
     $("#accordion").accordion({
         active: false,
         collapsible: true,
@@ -115,7 +99,6 @@ $(document).ready(function () {
 
     // UI Jasmine NOG DUBBEL!!!
     $("#button").button();
-
 
 
     // slider 

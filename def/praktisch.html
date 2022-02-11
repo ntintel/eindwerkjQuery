@@ -33,7 +33,7 @@
         </ul>
         <h3 class="nav02">x</h3>
     </nav>
-
+    <h1 class="praktisch-titel">Praktische informatie</h1>
     <div id="container2">
         <div class="content">
             <div id="tabs">
@@ -190,7 +190,12 @@
     <script src="js/eindwerk.js"></script>
     <script>
         $(document).ready(function () {
-            // De UI werkt niet meer als deze code verzet word naar eindwerk.js
+            // De code die hieronder staat werkt niet meer als het verzet word naar eindwerk.js
+            // Jasmine
+            $('#container2').fadeOut(0, function () {
+                $('#container2').fadeIn(2000, function () {
+                });
+            })
             // UI Jasmine 
             $("#accordion").accordion({
                 active: false,
