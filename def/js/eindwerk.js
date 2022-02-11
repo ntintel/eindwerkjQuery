@@ -88,21 +88,21 @@ $(document).ready(function () {
         $(".ajax").show();
     }));
 
-    // img word groter met hover Jasmine
-    $('.img').on('mouseenter', (function () {
+    // img wordt groter met hover Jasmine
+    let $img = $('.img')
+    $img.on('mouseenter', (function () {
         $(this).animate({
             width: '65%',
             height: '38%'
         })
     }));
 
-    $('.img').on('mouseleave', (function () {
+    $img.on('mouseleave', (function () {
         $(this).animate({
             width: '50%',
             height: '28%'
         })
     }));
-
 
     $("#accordion").accordion({
         active: false,
@@ -116,16 +116,23 @@ $(document).ready(function () {
     // UI Jasmine NOG DUBBEL!!!
     $("#button").button();
 
-
+    // FOTO PRAKTISCH.HTML
+    $("#danny").animate({
+        left: '250px',
+        opacity: '0.5',
+        height: '150px',
+        width: '150px'
+    });
 
 
 
     // Inschrijfformulier DAVY
-    $('input').on('focus', (function () {
+    let $input = $('input');
+    $input.on('focus', (function () {
         $(this).parent().find(".label-txt").addClass('label-active');
     }));
 
-    $("input").on('focusout', (function () {
+    $input.on('focusout', (function () {
         if ($(this).val() == '') {
             $(this).parent().find(".label-txt").removeClass('label-active');
         };
@@ -136,6 +143,7 @@ $(document).ready(function () {
     let $naam = $("#naam");
     let $email = $("#email");
     let $opleidingstraject = $("#opleidingstraject");
+    let $loading = $('#loading');
 
     $('#submit').on('click', (function (e) {
         $('#errorMsg').remove();
@@ -152,7 +160,7 @@ $(document).ready(function () {
                 success: function (result) {
                     $('#response').remove();
                     $container.append('<p id="response">' + result + '</p>');
-                    $('#loading').fadeOut(500, function () {
+                    $loading.fadeOut(500, function () {
                         $(this).remove();
                     });
                     $naam.val("");
@@ -162,7 +170,7 @@ $(document).ready(function () {
             });
         } else {
             $container.append("<p id='errorMsg'>Niet alle velden zijn ingevuld!</p>");
-            $('#loading').fadeOut(500, function () {
+            $loading.fadeOut(500, function () {
                 $(this).remove();
             });
         }
@@ -179,18 +187,19 @@ $(document).ready(function () {
 
     //POPUP Davy
     // Open Popup
+    let $popup = $('.popup')
     $('.openBtn').on('click', function () {
-        $('.popup').fadeIn(300);
+        $popup.fadeIn(300);
     });
 
     // Close Popup
     $('.closeBtn').on('click', function () {
-        $('.popup').fadeOut(300);
+        $popup.fadeOut(300);
     });
 
     // Close Popup when Click outside
-    $('.popup').on('click', function () {
-        $('.popup').fadeOut(300);
+    $popup.on('click', function () {
+        $popup.fadeOut(300);
     }).children().on('click', (function () {
         return false;
     }));
