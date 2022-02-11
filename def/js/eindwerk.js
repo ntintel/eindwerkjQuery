@@ -1,9 +1,6 @@
 $(document).ready(function () {
 
-    // --- TITEL SLIDE UP - NELE
-    $("h1").text("Cursus jQuery");
-
-    // --- Full page dropdown menu Nele
+    // --- FULL PAGE DROPDOWN NELE
     $('.btn02').on('click', (function () {
         $('.drop-down').animate({ top: "0px" }, 600);
     }));
@@ -57,7 +54,7 @@ $(document).ready(function () {
         });
     })
 
-    // AJAX
+    // AJAX - JASMINE
     $('#content1').on('click', function () {
         getContent('data-ajax/content1.html');
     });
@@ -106,11 +103,6 @@ $(document).ready(function () {
         })
     }));
 
-    // shake effect op title Jasmine
-    $("#jquery").on('hover', (function () {
-        $(this).effect("shake", { times: 3 }, 100);
-    }));
-
 
     $("#accordion").accordion({
         active: false,
@@ -125,15 +117,10 @@ $(document).ready(function () {
     $("#button").button();
 
 
-    // UI Jasmine NOG DUBBEL!!!
-    $("#progressbar").progressbar({
-        value: 60
-    });
 
 
-    //INSCHRIJVEN.HTML -- DAVY
 
-    // Inschrijfformulier 
+    // Inschrijfformulier DAVY
     $('input').on('focus', (function () {
         $(this).parent().find(".label-txt").addClass('label-active');
     }));
