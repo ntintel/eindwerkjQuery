@@ -54,40 +54,6 @@ $(document).ready(function () {
         });
     })
 
-    // AJAX - JASMINE
-    $('#content1').on('click', function () {
-        getContent('data-ajax/content1.html');
-    });
-    $('#content2').on('click', function () {
-        getContent('data-ajax/content2.html');
-    });
-    $('#content3').on('click', function () {
-        getContent('data-ajax/content3.html');
-    });
-    function getContent(filename) {
-        $.ajax({
-            url: filename,
-            type: 'GET',
-            dataType: 'html',
-            beforeSend: function () {
-                $('#contentarea').html('<img class="loading" src = "images/loading.gif" /> ');
-            },
-            success: function (data, textStatus, xhr) {
-                $('#contentarea').html(data);
-            },
-            error: function (xhr, textStatus, errorThrown) {
-                $('#contentarea').html(textStatus);
-            }
-        });
-    }
-
-    $("#hide").on('click'(function () {
-        $(".ajax").hide();
-    }));
-    $("#show").on('click'(function () {
-        $(".ajax").show();
-    }));
-
     // img wordt groter met hover Jasmine
     let $img = $('.img')
     $img.on('mouseenter', (function () {
@@ -103,58 +69,6 @@ $(document).ready(function () {
             height: '28%'
         })
     }));
-
-    $("#accordion").accordion({
-        active: false,
-        collapsible: true,
-        heightStyle: "content"
-    });
-
-    // UI Jasmine NOG DUBBEL!!!
-    $("#tabs").tabs();
-
-    // UI Jasmine NOG DUBBEL!!!
-    $("#button").button();
-
-
-    // slider 
-    var slideCount = $('#slider ul li').length;
-    var slideWidth = $('#slider ul li').width();
-    var slideHeight = $('#slider ul li').height();
-    var sliderUlWidth = slideCount * slideWidth;
-
-    $('#slider').css({ width: slideWidth, height: slideHeight });
-
-    $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-
-    $('#slider ul li:last-child').prependTo('#slider ul');
-
-    function moveLeft() {
-        $('#slider ul').animate({
-            left: + slideWidth
-        }, 200, function () {
-            $('#slider ul li:last-child').prependTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    function moveRight() {
-        $('#slider ul').animate({
-            left: - slideWidth
-        }, 200, function () {
-            $('#slider ul li:first-child').appendTo('#slider ul');
-            $('#slider ul').css('left', '');
-        });
-    };
-
-    $('a.control_prev').click(function () {
-        moveLeft();
-    });
-
-    $('a.control_next').click(function () {
-        moveRight();
-    });
-
 
     // Inschrijfformulier DAVY
     let $input = $('input');
