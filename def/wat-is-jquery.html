@@ -135,7 +135,7 @@
                     type: 'GET',
                     dataType: 'html',
                     beforeSend: function () {
-                        $('#contentarea').html('<img src = "images/jquery.jpg" /> ');
+                        $('#contentarea').html('<img class="loading" src = "images/loading.gif" /> ');
                     },
                     success: function (data, textStatus, xhr) {
                         $('#contentarea').html(data);
