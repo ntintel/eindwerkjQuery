@@ -253,12 +253,14 @@ nav.drop-down a {
   margin-top: -5%;
   position: absolute;
 }
+
 .praktisch-titel {
   margin: 0 auto;
   text-align: center;
   padding-top: 10%;
   margin-bottom: -5%;
 }
+
 .jquery-t {
   margin: auto;
   text-align: center;
@@ -414,6 +416,10 @@ input[type='submit']:hover,
   text-align: center;
   margin-left: 10%;
   position: absolute;
+}
+
+#errorMsg {
+  color: var(--main-color)
 }
 
 .container-title h1 {
