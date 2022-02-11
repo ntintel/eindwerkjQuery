@@ -5,17 +5,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>content3</title>
+    <style>
+        .ajax {
+            background-color: rgb(144, 43, 226);
+            width: 40%;
+            padding: 10px;
+        }
+
+        .animate-btn {
+            background-color: #CE52CF;
+            cursor: pointer;
+            color: black;
+            font-size: 20px;
+            border: 1px solid #CE52CF;
+            border-radius: 2px;
+            margin-top: -2px;
+        }
+    </style>
 </head>
 
 <body>
-    <div>
-        <p>
-            <img src="../images/night.png" style="float:left;vertical-align:middle" />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit justo a justo accumsan luctus.
-            In eu dui vitae lacus ...
-        </p>
-    </div>
+    <p class="ajax">Klik op de knoppen om te zien wat je met jQuery kan</p>
+    <button class="animate-btn" id="slideup">Slide Up</button>
+    <button class="animate-btn" id="slidedown">Slide down</button>
 
 
     <script src="../js/jquery.js"></script>
@@ -23,18 +36,25 @@
     <script>
         $(document).ready(function () {
             // img word groter met hover Jasmine
-            $('.img').mouseenter(function () {
-                $(this).animate({
-                    width: '65%',
-                    height: '38%'
-                })
-            })
-            $('.img').mouseleave(function () {
-                $(this).animate({
-                    width: '50%',
-                    height: '28%'
-                })
-            })
+            /* $('.img').mouseenter(function () {
+                 $(this).animate({
+                     width: '65%',
+                     height: '38%'
+                 })
+             })
+             $('.img').mouseleave(function () {
+                 $(this).animate({
+                     width: '50%',
+                     height: '28%'
+                 })
+             })*/
+            $("#slideup").click(function () {
+                $(".ajax").slideUp();
+            });
+            $("#slidedown").click(function () {
+                $(".ajax").slideDown();
+            });
+
         });
     </script>
 </body>

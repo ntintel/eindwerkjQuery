@@ -43,9 +43,9 @@ p {
 #contentarea {
     border: 1px solid #CE52CF;
     width: 70%;
+    height: 20vh;
     margin: auto;
-    margin-top: 50px;
-    margin-bottom: 200px;
+    
 }
 
 #buttons {

@@ -5,23 +5,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Content1</title>
+    <style>
+        .ajax {
+            background-color: rgb(43, 168, 226);
+            width: 40%;
+            padding: 10px;
+        }
+
+        .animate-btn {
+            background-color: #CE52CF;
+            cursor: pointer;
+            color: black;
+            font-size: 20px;
+            border: 1px solid #CE52CF;
+            border-radius: 2px;
+            margin-top: -2px;
+        }
+    </style>
 </head>
 
 <body>
-    <p id="ajax">Klik op de knoppen om te zien wat je met jQuery kan</p>
-    <button id="hide">Hide</button>
-    <button id="show">Show</button>
+    <p class="ajax">Klik op de knoppen om te zien wat je met jQuery kan</p>
+    <button class="animate-btn" id="hide">Hide</button>
+    <button class="animate-btn" id="show">Show</button>
 
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery-ui.js"></script>
     <script>
         $(document).ready(function () {
             $("#hide").click(function () {
-                $("#ajax").hide();
+                $(".ajax").hide();
             });
             $("#show").click(function () {
-                $("#ajax").show();
+                $(".ajax").show();
             });
         });
     </script>
