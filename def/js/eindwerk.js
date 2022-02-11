@@ -116,14 +116,44 @@ $(document).ready(function () {
     // UI Jasmine NOG DUBBEL!!!
     $("#button").button();
 
-    // FOTO PRAKTISCH.HTML
-    $("#danny").animate({
-        left: '250px',
-        opacity: '0.5',
-        height: '150px',
-        width: '150px'
+
+    // slider 
+    var slideCount = $('#slider ul li').length;
+    var slideWidth = $('#slider ul li').width();
+    var slideHeight = $('#slider ul li').height();
+    var sliderUlWidth = slideCount * slideWidth;
+
+    $('#slider').css({ width: slideWidth, height: slideHeight });
+
+    $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
     });
 
+    $('a.control_next').click(function () {
+        moveRight();
+    });
 
 
     // Inschrijfformulier DAVY

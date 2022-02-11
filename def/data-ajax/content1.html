@@ -29,24 +29,35 @@
             width: 30px;
             height: 30px;
         }
+
+        .img {
+            width: 200px;
+            height: 150px;
+        }
     </style>
 </head>
 
 <body>
-    <p class="ajax">Klik op de knoppen om te zien wat je met jQuery kan</p>
-    <button class="animate-btn" id="hide">Hide</button>
-    <button class="animate-btn" id="show">Show</button>
+    <img class="img" src="images/schoolgebouw.jpg" alt="foto van een klas">
 
     <script src="../js/jquery.js"></script>
     <script src="../js/jquery-ui.js"></script>
     <script>
         $(document).ready(function () {
-            $("#hide").click(function () {
-                $(".ajax").hide();
-            });
-            $("#show").click(function () {
-                $(".ajax").show();
-            });
+            // img word groter met hover Jasmine
+            $('.img').on('mouseenter', (function () {
+                $(this).animate({
+                    width: '220px',
+                    height: '180px'
+                })
+            }));
+
+            $('.img').on('mouseleave', (function () {
+                $(this).animate({
+                    width: '200px',
+                    height: '150px'
+                })
+            }));
         });
     </script>
 </body>
