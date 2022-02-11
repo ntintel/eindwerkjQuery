@@ -1,3 +1,5 @@
+<!--NELE-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +11,6 @@
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="css/examples.css">
     <title>Cursus jQuery</title>
 </head>
@@ -36,11 +35,9 @@
             <h3 class="nav02">x</h3>
         </nav>
 
-        <!-- Code Nele hieronder -->
         <div class="section" id="page1">
             <div class="container">
                 <h1 class="animate__animated animate__bounceInUp opacity" id="cursustitel"></h1>
-                <!-- <div class="left"> -->
                 <div id="t">
                     <strong id="type">Hey jij!</strong><br><br>
                     <ins>1</ins>Wil je leren hoe je <del>koe<ins>1</ins></del>coole effecten zoals deze
@@ -64,62 +61,10 @@
         <a href="wat-is-jquery.html"><i class="fa-solid fa-chevron-right"></i></a>
     </div>
 
-
-    <script src="js/t.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/t.min.js"></script>
-    <script src="js-homepage/polygonizr.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            // --- TITEL SLIDE UP - NELE
-            $("h1").text("Cursus jQuery");
-
-            // --- FULL PAGE DROPDOWN MENU - NELE
-            let $dropdown = $('.drop-down')
-            $('.btn02').click(function () {
-                $dropdown.animate({ top: "0px" }, 600);
-            });
-            $('h3.nav02').click(function () {
-                $dropdown.animate({ top: "-100vh" }, 600);
-            });
-
-
-            // --- ACHTERGROND POLYGON- JASMIEN
-            let $sitelading = $('#site-landing');
-            $sitelading.polygonizr();
-
-            // Update size.
-            $(window).resize(function () {
-                $sitelading.polygonizr("stop");
-                $sitelading.polygonizr({
-                    canvasHeight: $(this).height(),
-                    canvasWidth: $(this).width()
-                });
-                $sitelading.polygonizr("refresh");
-            });
-
-            // --- TYPEWRITER PLUGIN - NELE
-            $(function () {
-                $('#t').t({
-                    delay: 2,
-                    speed: 50,
-                    speed_vary: false,
-                    beep: false,
-                    mistype: 3,
-                    locale: 'en',
-                    caret: '\u2589',
-                    blink: true,
-                    blink_perm: false,
-                    repeat: 0,
-                    tag: 'span',
-                    pause_on_click: true,
-                    pause_on_tab_switch: true,
-                    init: function (elm) { },
-                    typing: function (elm, chr_or_elm, left, total) { },
-                    fin: function (elm) { }
-                });
-            });
-        });
+    <script src="js/polygonizr.min.js"></script>
+    <script src="js/eindwerk.js">
     </script>
 </body>
 

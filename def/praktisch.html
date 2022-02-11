@@ -10,11 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/jquery-ui.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-    <link rel="stylesheet" href="css/praktisch.css">
     <link rel="stylesheet" href="css/examples.css">
-
     <title>Praktische informatie</title>
 </head>
 
@@ -36,7 +32,6 @@
         </ul>
         <h3 class="nav02">x</h3>
     </nav>
-
 
     <div id="container2">
         <div class="content">
@@ -90,11 +85,6 @@
                     </ul>
                 </div>
             </div>
-            <!---
-            <br>
-            <h3 class="titel">Beschikbare plaatsen : 5</h3>
-            <div id="progressbar"></div>
-            -->
         </div>
 
         <div class="content">
@@ -168,18 +158,13 @@
     <div id="arrow2">
         <a href="inschrijven.html"><i class="fa-solid fa-chevron-right"></i></a>
     </div>
-    </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/eindwerk.js"></script>
     <script>
         $(document).ready(function () {
-            // Jasmine
-            $('.container2').fadeOut(1500, function () {
-                $('.container2').fadeIn(2000, function () {
-                });
-            })
-
             // --- Full page dropdown menu Nele
             $('.btn02').click(function () {
                 $('.drop-down').animate({ top: "0px" }, 600);
@@ -217,28 +202,6 @@
                 })
             })
 
-            // shake effect op title Jasmine
-            $("#jquery").hover(function () {
-                $(this).effect("shake", { times: 3 }, 100);
-            });
-
-            // Fotoslider - Nele
-
-            $(window).load(function () {
-                $('.flexslider').flexslider({
-                    animation: "slide",
-                    animationLoop: false,
-                    itemWidth: 210,
-                    itemMargin: 5,
-                    minItems: 1,
-                    maxItems: 1
-                });
-            });
-
-            // UI Jasmine
-            $("#progressbar").progressbar({
-                value: 60
-            });
 
         })
     </script>

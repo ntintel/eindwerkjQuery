@@ -11,9 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <title>Inschrijven</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/examples.css">
-
 </head>
 
 <body>
@@ -36,9 +34,7 @@
             <h3 class="nav02">x</h3>
         </nav>
 
-
         <br><br><br>
-        <!-- Code Davy hieronder -->
         <div class="inschrijven">
             <div class="container3">
                 <div>
@@ -109,102 +105,8 @@
             <a href="index.html"><i class="fa-solid fa-chevron-right"></i></a>
         </div>
 
-        <script src="js/t.js"></script>
-        <script src="js/t.min.js"></script>
-        <script>
-            $(document).ready(function () {
-
-                // --- Full page dropdown menu
-                $('.btn02').click(function () {
-                    $('.drop-down').animate({ top: "0px" }, 600);
-                });
-
-                $('h3.nav02').click(function () {
-                    $('.drop-down').animate({ top: "-100vh" }, 600);
-                });
-
-                // Inschrijfformulier Davy
-                $('input').focus(function () {
-                    $(this).parent().find(".label-txt").addClass('label-active');
-                });
-
-                $("input").focusout(function () {
-                    if ($(this).val() == '') {
-                        $(this).parent().find(".label-txt").removeClass('label-active');
-                    };
-                });
-
-                // Formulier data toevoegen aan database Davy
-                let $container = $("#container");
-                let $naam = $("#naam");
-                let $email = $("#email");
-                let $opleidingstraject = $("#opleidingstraject");
-
-                $('#submit').click(function (e) {
-                    $('#errorMsg').remove();
-                    $container.append('<img src="images/loading.gif" alt="Loading" id="loading" />');
-                    let naamVal = $naam.val();
-                    let emailVal = $email.val();
-                    let opleidingstrajectVal = $opleidingstraject.val();
-                    e.preventDefault();
-                    if (naamVal != "" && emailVal != "" && opleidingstrajectVal != "") {
-                        $.ajax({
-                            url: 'submit_to_db_pdo.php',
-                            type: 'POST',
-                            data: 'naam=' + naamVal + '&email=' + emailVal + '&opleidingstraject=' + opleidingstrajectVal,
-                            success: function (result) {
-                                $('#response').remove();
-                                $container.append('<p id="response">' + result + '</p>');
-                                $('#loading').fadeOut(500, function () {
-                                    $(this).remove();
-                                });
-                                $naam.val("");
-                                $email.val("");
-                                $opleidingstraject.val("");
-
-                            }
-
-                        });
-                    } else {
-                        $container.append("<p id='errorMsg'>Niet alle velden zijn ingevuld!</p>");
-                        $('#loading').fadeOut(500, function () {
-                            $(this).remove();
-                        });
-
-                    }
-
-                });
-
-
-                // Data opvragen uit database Davy
-                $.ajax({
-                    url: 'opvragen.php',
-                    type: 'GET',
-                    success: function (result) {
-                        $('#box').append(result);
-                    }
-                });
-
-
-                //POPUP Davy
-                // Open Popup
-                $('.openBtn').on('click', function () {
-                    $('.popup').fadeIn(300);
-                });
-
-                // Close Popup
-                $('.closeBtn').on('click', function () {
-                    $('.popup').fadeOut(300);
-                });
-
-                // Close Popup when Click outside
-                $('.popup').on('click', function () {
-                    $('.popup').fadeOut(300);
-                }).children().click(function () {
-                    return false;
-                });
-            })
-        </script>
+        <script src="js/eindwerk.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 
 </html>
