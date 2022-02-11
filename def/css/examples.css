@@ -58,9 +58,8 @@ footer {
   margin: auto;
   text-align: center;
   margin-top: 14%;
-  font-size: 4em;
+  font-size: 3em;
   color: var(--main-color);
-  font-size: 60px;
   z-index: 900;
 }
 
@@ -555,7 +554,7 @@ input {
   top: 0px;
   left: 50%;
   transform: translateX(-50%);
-  background: #ce52cf;
+  background: var(--main-color);
   transition: ease 0.6s;
 }
 
@@ -583,9 +582,9 @@ input[type='submit'],
   width: 40%;
   height: 50px;
   padding: 5px 24px;
-  background: rgb(220, 220, 220);
+  background: var(--main-color);
   font-weight: bold;
-  color: black;
+  color: #ffffff;
   border: none;
   outline: none;
   border-radius: 2px;
@@ -596,13 +595,13 @@ input[type='submit'],
 
 input[type='submit']:hover,
 .openBtn:hover {
-  background: #ce52cf;
-  color: #ffffff;
+  background: ffffff;
+  color: black;
 }
 
 .border-1 {
   margin: 2rem 0;
-  border: 1px solid #ce52cf;
+  border: 1px solid var(--main-color);
 }
 
 #response {
@@ -655,6 +654,10 @@ input[type='submit']:hover,
 th {
   padding: 0px 50px 0px 0px;
   font-weight: bold;
+}
+
+#loading {
+  width: 100px;
 }
 
 /*--- EINDE DAVY --*/
