@@ -7,37 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Content2</title>
     <style>
-        .animate-btn {
-            background-color: #CE52CF;
+        .animate-btn,
+        .animate-reset {
             cursor: pointer;
-            color: black;
+            color: #CE52CF;
             font-size: 20px;
-            border: 1px solid #CE52CF;
-            border-radius: 2px;
             margin-top: -2px;
+            border: 1px solid #CE52CF;
+            padding: 5px 10px
         }
 
         .loading {
             width: 30px;
             height: 30px;
         }
+
+        li.animatie-btn,
+        li.animatie-reset {
+            display: inline;
+        }
+
+        #div1 {
+            width: 80px;
+            height: 80px;
+            display: none;
+            background-color: rgb(0, 195, 255);
+            border: 1px solid #CE52CF;
+            box-sizing: border-box;
+            margin-left: 40px;
+        }
     </style>
 </head>
 
 <body>
-    <button class="animate-btn">Click to fade in boxes</button><br><br>
-    <div id="div1" style="width:80px;height:80px;display:none;background-color:rgb(0, 195, 255);"></div><br>
+    <ul id="animatie-knop">
+        <li class="animate-btn">Start</li>
+        <li class="animate-reset">Reset</li>
+    </ul>
+    <div id="div1">
+
+        <br>
 
 
-    <script src="../js/jquery.js"></script>
-    <script src="../js/jquery-ui.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("button").click(function () {
-                $("#div1").fadeIn(3000);
+        <script src="../js/jquery.js"></script>
+        <script src="../js/jquery-ui.js"></script>
+        <script>
+            $(document).ready(function () {
+                $(".animate-btn").click(function () {
+                    $("#div1").fadeIn(3000).animate({ width: "90%" }).animate({ borderWidth: 10 });
+                });
+                $(".animate-reset").click(function () {
+                    $("#div1").animate({ borderWidth: -10 }).animate({ width: "0%" }).fadeOut()
+                });
             });
-        });
-    </script>
+        </script>
 </body>
 
 </html>
