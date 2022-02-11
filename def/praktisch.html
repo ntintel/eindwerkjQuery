@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="css/jquery-ui.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="css/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" href="css/examples.css">
     <title>Praktische informatie</title>
 </head>
@@ -84,8 +84,19 @@
                         <li>Je geeft niet op bij de eerste de beste bug of foutmelding</li>
                     </ul>
                 </div>
+
             </div>
+            <div class="ct">
+                <a href="inschrijven.html"><input type="submit" class="openBtn" value="Inschrijven"></a>
+            </div>
+            <!---
+            <br>
+            <h3 class="titel">Beschikbare plaatsen : 5</h3>
+            <div id="progressbar"></div>
+            -->
         </div>
+
+
 
         <div class="content">
             <div id="accordion">
@@ -141,10 +152,11 @@
                     Meld je aan</b> om te weten of je voor deze cursus recht hebt op de gemeentekorting.
                 </ul>
             </div>
+
             <img src="images/danny.png" alt="docent">
         </div>
-        <button id="button"><a href="inschrijven.html">Inschrijven</a></button>
-        <br><br>
+
+
     </div>
     <div id="caroussel">
         <img src="images/danny.png" alt="docent">
@@ -158,10 +170,21 @@
     <div id="arrow2">
         <a href="inschrijven.html"><i class="fa-solid fa-chevron-right"></i></a>
     </div>
+    </div>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery-ui.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.js"><\/script>')</script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>window.jQuery.ui || document.write('<script src="js/jquery-ui.min.js"><\/script>')</script>
+    <script>
+        $(function () {
+            if ($('.ui-helper-hidden:first').is(':visible') === true) {
+                $('<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" />').appendTo('head');
+            }
+        });</script>
+
+
     <script src="js/eindwerk.js"></script>
     <script>
         $(document).ready(function () {
@@ -176,7 +199,7 @@
 
             // UI Jasmine 
             $("#accordion").accordion({
-                icons: { "header": "ui-icon-plus" },
+                icons: { "header": "ui-icon-blank" },
                 active: false,
                 collapsible: true,
                 heightStyle: "content"
@@ -201,8 +224,6 @@
                     height: '28%'
                 })
             })
-
-
         })
     </script>
 </body>
