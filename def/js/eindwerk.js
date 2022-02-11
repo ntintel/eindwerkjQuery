@@ -91,21 +91,6 @@ $(document).ready(function () {
         $(".ajax").show();
     }));
 
-
-    // UI Jasmine 
-    $("#accordion").accordion({
-        icons: { "header": "ui-icon-plus" },
-        active: false,
-        collapsible: true,
-        heightStyle: "content"
-    });
-
-    // UI Jasmine
-    $("#tabs").tabs();
-
-    // UI Jasmine
-    $("#button").button();
-
     // img word groter met hover Jasmine
     $('.img').on('mouseenter', (function () {
         $(this).animate({
@@ -127,9 +112,7 @@ $(document).ready(function () {
     }));
 
 
-    // UI Jasmine  NOG DUBBEL!!!
     $("#accordion").accordion({
-        icons: { "header": "ui-icon-plus" },
         active: false,
         collapsible: true,
         heightStyle: "content"

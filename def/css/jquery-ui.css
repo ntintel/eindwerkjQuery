@@ -75,6 +75,7 @@
 	font-size: 100%;
 	width: 70%;
 	box-sizing: border-box;
+	background: #ffffff;
 
 }
 
@@ -388,6 +389,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 .ui-tabs .ui-tabs-nav {
 	margin: 0;
 	padding: .2em .2em 0;
+	background-color: #ce52cf;
 }
 
 .ui-tabs .ui-tabs-nav li {
@@ -399,6 +401,8 @@ input.ui-button.ui-icon-notext .ui-icon {
 	border-bottom-width: 0;
 	padding: 0;
 	white-space: nowrap;
+	background: #ffffff;
+
 }
 
 .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
@@ -426,7 +430,7 @@ input.ui-button.ui-icon-notext .ui-icon {
 	display: block;
 	border-width: 0;
 	padding: 1em 1.4em;
-	background: none;
+	background: #ffffff;
 }
 
 .ui-tooltip {
@@ -461,11 +465,12 @@ body .ui-tooltip {
 
 .ui-widget.ui-widget-content {
 	border: 1px solid #2C3E50;
+	background: #ffffff;
 }
 
 .ui-widget-content {
 	border: 1px solid #2C3E50;
-	background: #ffffff url("images/ui-bg_inset-soft_100_f4f0ec_1x100.png") 50% bottom repeat-x;
+	background: #ffffff;
 	color: #1e1b1d;
 }
 
@@ -475,7 +480,7 @@ body .ui-tooltip {
 
 .ui-widget-header {
 	border: 1px solid #2C3E50;
-	background: #CE52CF url("images/ui-bg_glass_25_cb842e_1x400.png") 50% 50% repeat-x;
+	background-color: #CE52CF;
 	color: #ffffff;
 	font-weight: bold;
 }
@@ -646,6 +651,7 @@ a.ui-button:active,
 .ui-icon {
 	width: 16px;
 	height: 16px;
+	display: none;
 }
 
 .ui-icon,

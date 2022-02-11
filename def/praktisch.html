@@ -158,9 +158,7 @@
 
 
     </div>
-    <div id="caroussel">
-        <img src="images/danny.png" alt="docent">
-    </div>
+
     <footer>
         Copyright © 2022 - Nele Tintel - Jamine Juvyns - Davy Janssens
     </footer>
@@ -188,18 +186,8 @@
     <script src="js/eindwerk.js"></script>
     <script>
         $(document).ready(function () {
-            // --- Full page dropdown menu Nele
-            $('.btn02').click(function () {
-                $('.drop-down').animate({ top: "0px" }, 600);
-            });
-
-            $('h3.nav02').click(function () {
-                $('.drop-down').animate({ top: "-100vh" }, 600);
-            });
-
             // UI Jasmine 
             $("#accordion").accordion({
-                icons: { "header": "ui-icon-blank" },
                 active: false,
                 collapsible: true,
                 heightStyle: "content"
@@ -210,20 +198,6 @@
 
             // UI Jasmine
             $("#button").button();
-
-            // img word groter met hover Jasmine
-            $('.img').mouseenter(function () {
-                $(this).animate({
-                    width: '65%',
-                    height: '38%'
-                })
-            })
-            $('.img').mouseleave(function () {
-                $(this).animate({
-                    width: '50%',
-                    height: '28%'
-                })
-            })
         })
     </script>
 </body>
