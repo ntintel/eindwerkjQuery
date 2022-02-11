@@ -108,6 +108,78 @@
 
         <script src="js/eindwerk.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                <script>
+            $(document).ready(function () {
+                // Formulier data toevoegen aan database Davy
+                let $container = $("#container");
+                let $naam = $("#naam");
+                let $email = $("#email");
+                let $opleidingstraject = $("#opleidingstraject");
+
+                $('#submit').click(function (e) {
+                    $('#errorMsg').remove();
+                    $container.append('<img src="images/loading.gif" alt="Loading" id="loading" />');
+                    let naamVal = $naam.val();
+                    let emailVal = $email.val();
+                    let opleidingstrajectVal = $opleidingstraject.val();
+                    e.preventDefault();
+                    if (naamVal != "" && emailVal != "" && opleidingstrajectVal != "") {
+                        $.ajax({
+                            url: 'submit_to_db_pdo.php',
+                            type: 'POST',
+                            data: 'naam=' + naamVal + '&email=' + emailVal + '&opleidingstraject=' + opleidingstrajectVal,
+                            success: function (result) {
+                                $('#response').remove();
+                                $container.append('<p id="response">' + result + '</p>');
+                                $('#loading').fadeOut(500, function () {
+                                    $(this).remove();
+                                });
+                                $naam.val("");
+                                $email.val("");
+                                $opleidingstraject.val("");
+
+                            }
+
+                        });
+                    } else {
+                        $container.append("<p id='errorMsg'>Niet alle velden zijn ingevuld!</p>");
+                        $('#loading').fadeOut(500, function () {
+                            $(this).remove();
+                        });
+
+                    }
+
+                });
+
+
+                // Data opvragen uit database Davy
+                $.ajax({
+                    url: 'opvragen.php',
+                    type: 'GET',
+                    success: function (result) {
+                        $('#box').append(result);
+                    }
+                });
+
+                //POPUP Davy
+                // Open Popup
+                $('.openBtn').on('click', function () {
+                    $('.popup').fadeIn(300);
+                });
+
+                // Close Popup
+                $('.closeBtn').on('click', function () {
+                    $('.popup').fadeOut(300);
+                });
+
+                // Close Popup when Click outside
+                $('.popup').on('click', function () {
+                    $('.popup').fadeOut(300);
+                }).children().click(function () {
+                    return false;
+                });
+            })
+        </script>
 </body>
 
 </html>
