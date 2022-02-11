@@ -1,3 +1,5 @@
+<!--BEGIN JASMINE-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,17 +16,13 @@
             font-size: 20px;
             margin-top: -2px;
             border: 1px solid #CE52CF;
-            padding: 5px 10px
+            padding: 5px 10px;
+            display: inline;
         }
 
         .loading {
             width: 30px;
             height: 30px;
-        }
-
-        li.animatie-btn,
-        li.animatie-reset {
-            display: inline;
         }
 
         #div1 {
@@ -44,23 +42,21 @@
         <li class="animate-btn">Start</li>
         <li class="animate-reset">Reset</li>
     </ul>
-    <div id="div1">
-
-        <br>
-
-
-        <script src="../js/jquery.js"></script>
-        <script src="../js/jquery-ui.js"></script>
-        <script>
-            $(document).ready(function () {
-                $(".animate-btn").click(function () {
-                    $("#div1").fadeIn(3000).animate({ width: "90%" }).animate({ borderWidth: 10 });
-                });
-                $(".animate-reset").click(function () {
-                    $("#div1").animate({ borderWidth: -10 }).animate({ width: "0%" }).fadeOut()
-                });
+    <div id="div1">Wow!</div>
+    <br>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".animate-btn").click(function () {
+                $("#div1").fadeIn(3000).animate({ width: "90%" }).animate({ fontSize: "24px" }).animate({ borderWidth: 10 });
             });
-        </script>
+            $(".animate-reset").click(function () {
+                $("#div1").animate({ borderWidth: -10 }).animate({ fontSize: "15px" }).animate({ width: "0%" }).fadeOut()
+            });
+        });
+    </script>
 </body>
 
 </html>
+<!--BEGIN JASMINE-->
