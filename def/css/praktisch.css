@@ -1,11 +1,5 @@
-/* Jasmine */
-body {
-    background-color: #000000;
-    font-family: "Roboto";
-}
-
 #container2 {
-    width: 80%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -25,12 +19,9 @@ p {
 }
 
 .content {
-    margin-top: 30%;
+    margin-top: 20%;
 }
 
-#accordion {
-    margin-top: 20px;
-}
 
 
 #jquery {
@@ -70,10 +61,14 @@ p {
     line-height: 24px;
 }
 
-.img {
-    width: 50%;
-    height: 28%;
-    box-shadow: 1px 2px 60px black;
+img {
+    width: 70%;
+    margin-top: 5%;
+}
+
+#caroussel {
+    margin-left: 40%;
+    margin-top: 5%;
 }
 
 /* -- */

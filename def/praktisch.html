@@ -9,6 +9,9 @@
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="css/jquery-ui.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <link rel="stylesheet" href="css/praktisch.css">
     <link rel="stylesheet" href="css/examples.css">
 
@@ -87,16 +90,14 @@
                     </ul>
                 </div>
             </div>
+            <!---
             <br>
             <h3 class="titel">Beschikbare plaatsen : 5</h3>
             <div id="progressbar"></div>
-            <button id="button"><a href="inschrijven.html">Inschrijven</a></button>
-            <br><br>
-
+            -->
         </div>
 
         <div class="content">
-            <img class="img" src="images/picture.jpg" alt="jquery">
             <div id="accordion">
                 <h3>Wanneer</h3>
                 <ul class="lijst">
@@ -136,25 +137,31 @@
 
                 <h3>Kortingen</h3>
                 <ul class="lijst">
-                    <h4>Verminderd inschrijvingsgeld</h4>
-                    <li>Tijdens je <b>online inschrijving</b> betaal je het standaard inschrijvingstarief.</li>
-                    <h4>Bepaalde kortingen krijg je automatisch toegekend.</h4>
-                    <li>We kijken voor <b>elke inschrijving</b> na of je voor iets in aanmerking komt.</li>
-                    <h4>Kan je zelf aantonen dat je recht hebt op een korting?</h4>
-                    <li>Bezorg dan de nodige attesten via <b>cursistenloket@cvodeverdieping.be</b> of geef ze
-                        persoonlijk af in het cursistenloket.</li>
-                    <h4>Heb je recht op verminderd inschrijvingsgeld?</h4>
-                    <li>Dan <b>storten we het kortingsbedrag</b> zo snel mogelijk terug op jouw rekening</li>
-                    <hr>
+                    Tijdens je <b>online inschrijving</b> betaal je het standaard inschrijvingstarief.<br>
+                    Bepaalde kortingen krijg je automatisch toegekend.
+                    We kijken voor <b>elke inschrijving</b> na of je voor iets in aanmerking komt.
+                    Kan je zelf aantonen dat je recht hebt op een korting?
+                    Bezorg dan de nodige attesten via <b>cursistenloket@cvodeverdieping.be</b> of geef ze
+                    persoonlijk af in het cursistenloket.
+                    Heb je recht op verminderd inschrijvingsgeld?
+                    Dan <b>storten we het kortingsbedrag</b> zo snel mogelijk terug op jouw rekening
                     <h4>Gemeentekorting</h4>
-                    <li>Ben je tussen <b>16 en 18 jaar </b>of <b>ouder dan 62</b> op het moment van je inschrijving?
-                        Dan
-                        krijg je mogelijk een korting van gemeente Heusden-Zolder.</li>
-                    <li><b>Meld je aan</b> om te weten of je voor deze cursus recht hebt op de gemeentekorting.</li>
+                    Ben je tussen <b>16 en 18 jaar </b>of <b>ouder dan 62</b> op het moment van je inschrijving?
+                    Dan krijg je mogelijk een korting van gemeente Heusden-Zolder.
+                    Meld je aan</b> om te weten of je voor deze cursus recht hebt op de gemeentekorting.
                 </ul>
             </div>
-
+            <img src="images/danny.png" alt="docent">
         </div>
+        <button id="button"><a href="inschrijven.html">Inschrijven</a></button>
+        <br><br>
+    </div>
+    <div id="caroussel">
+        <img src="images/danny.png" alt="docent">
+    </div>
+    <footer>
+        Copyright © 2022 - Nele Tintel - Jamine Juvyns - Davy Janssens
+    </footer>
     </div>
 
     <script src="js/jquery.js"></script>
@@ -207,6 +214,19 @@
             // shake effect op title Jasmine
             $("#jquery").hover(function () {
                 $(this).effect("shake", { times: 3 }, 100);
+            });
+
+            // Fotoslider - Nele
+
+            $(window).load(function () {
+                $('.flexslider').flexslider({
+                    animation: "slide",
+                    animationLoop: false,
+                    itemWidth: 210,
+                    itemMargin: 5,
+                    minItems: 1,
+                    maxItems: 1
+                });
             });
 
             // UI Jasmine
