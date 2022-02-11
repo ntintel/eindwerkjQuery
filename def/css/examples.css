@@ -371,7 +371,6 @@ input[type='submit'],
   width: 40%;
   height: 50px;
   padding: 5px 24px;
-  background: rgb(220, 220, 220);
   font-weight: bold;
   color: black;
   border: none;
@@ -380,11 +379,12 @@ input[type='submit'],
   cursor: pointer;
   transition: ease 0.3s;
   margin-top: 1rem;
+  background: #ce52cf;
 }
 
 input[type='submit']:hover,
 .openBtn:hover {
-  background: #ce52cf;
+   background: rgb(220, 220, 220);
   color: #ffffff;
 }
 
